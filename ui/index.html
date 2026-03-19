@@ -161,7 +161,7 @@
           <h1 class="text-2xl font-semibold tracking-tight mb-1">
             Top insights from your campaign performance
           </h1>
-          <p class="text-sm text-slate-500">
+          <p id="results-subtitle" class="text-sm text-slate-500">
             Here are the 3 things you should pay attention to:
           </p>
         </div>
@@ -319,6 +319,23 @@
       const executiveSummary = data.executive_summary || '';
       const insightsToShow = prioritized.slice(0, 4);
       const insightCount = insightsToShow.length;
+      const subtitleEl = document.getElementById('results-subtitle');
+
+      // Dynamic subtitle based on rendered insight count
+      if (subtitleEl) {
+        if (insightCount === 3) {
+          subtitleEl.textContent = 'Here are the 3 things you should pay attention to:';
+          subtitleEl.classList.remove('hidden');
+        } else if (insightCount === 2) {
+          subtitleEl.textContent = 'Here are the 2 things you should pay attention to:';
+          subtitleEl.classList.remove('hidden');
+        } else if (insightCount === 1) {
+          subtitleEl.textContent = 'Here is the top thing you should pay attention to:';
+          subtitleEl.classList.remove('hidden');
+        } else {
+          subtitleEl.classList.add('hidden');
+        }
+      }
 
       // Top insights as compact floating tiles
       const topEl = document.getElementById('top-insights');
