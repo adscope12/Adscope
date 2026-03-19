@@ -435,6 +435,7 @@ def run_full_pipeline(
         
         # CRITICAL FIX #1: Empty DataFrame validation
         if df.empty:
+            logger.info("Pipeline response status: error (empty file)")
             return {
                 "success": False,
                 "error": "File is empty or contains no data rows.",
@@ -442,6 +443,7 @@ def run_full_pipeline(
             }
         
         if len(df.columns) == 0:
+            logger.info("Pipeline response status: error (no columns)")
             return {
                 "success": False,
                 "error": "File contains no columns.",
@@ -454,6 +456,7 @@ def run_full_pipeline(
         
         if not allow_insights:
             # Dataset too small (< 5 rows) - return no insights
+            logger.info("Pipeline response status: no_insights (dataset too small)")
             return {
                 "success": True,
                 "no_insights": True,
@@ -491,8 +494,15 @@ def run_full_pipeline(
                 schema_mapping=schema_mapping,
                 apply_mappings=True,  # Create canonical bridge
             )
+            # Debug visibility for broad-schema datasets
+            mapped_cols = canonical_structure.get("column_mapping_dict", {})
+            canonical_df = canonical_structure.get("canonical_df")
+            canonical_cols = list(canonical_df.columns) if canonical_df is not None else []
+            logger.info("Schema mapping result: %s", mapped_cols)
+            logger.info("Canonical fields populated: %s", canonical_cols)
         else:
             canonical_structure = None
+            logger.info("Schema mapping skipped (skip_reading=True); using raw parser path.")
         
         # ============================================================
         # STEP 4: Deterministic Insight Engine
@@ -518,9 +528,16 @@ def run_full_pipeline(
                 )
             # Fallback to file path (legacy mode)
             scored_patterns, dataframe = engine.process(csv_path=file_path)
+
+        logger.info("KPI fields available: %s", [c for c in dataframe.columns if c in {
+            "spend", "revenue", "clicks", "impressions", "conversions",
+            "ctr", "cvr", "cpc", "cpa", "aov", "roas", "roi", "engagement_score"
+        }])
+        logger.info("Candidates generated: %d", len(scored_patterns))
         
         # CRITICAL FIX #2: Empty patterns handling
         if not scored_patterns:
+            logger.info("Pipeline response status: no_insights (0 candidates from engine)")
             return {
                 "success": True,
                 "no_insights": True,
@@ -540,12 +557,14 @@ def run_full_pipeline(
             scored_patterns,
             top_n=max_insights  # Use dataset-size-aware limit
         )
+        logger.info("Candidates after validation: %d", len(validated_patterns))
 
         # Story-level deduplication (metric-family business stories)
         validated_patterns = deduplicate_story_insights(validated_patterns)
         
         # If validation filtered out all insights, return no insights
         if not validated_patterns:
+            logger.info("Pipeline response status: no_insights (all candidates filtered by validation)")
             return {
                 "success": True,
                 "no_insights": True,
@@ -562,6 +581,7 @@ def run_full_pipeline(
         # Remove duplicate insights that describe the same pattern
         # Keep only the strongest candidate (highest composite_score) per pattern signature
         deduplicated_patterns = deduplicate_insights(validated_patterns)
+        logger.info("Candidates after dedup: %d", len(deduplicated_patterns))
 
         # Final-stage hard constraints for grounded top priorities:
         # - Ensure at least one campaign/platform/device insight in top 3 if any exist
@@ -570,6 +590,7 @@ def run_full_pipeline(
         
         # If deduplication removed all insights (shouldn't happen, but safety check)
         if not deduplicated_patterns:
+            logger.info("Pipeline response status: no_insights (all candidates removed by dedup)")
             return {
                 "success": True,
                 "no_insights": True,
@@ -584,6 +605,7 @@ def run_full_pipeline(
         # ============================================================
         # This step ONLY reorders an already-selected shortlist and optionally removes
         # LLM-marked near-duplicates. It never introduces new insights.
+        pre_rerank_patterns = list(deduplicated_patterns)
         try:
             reranker = BusinessReranker()
             deduplicated_patterns = reranker.rerank(
@@ -592,12 +614,30 @@ def run_full_pipeline(
             )
         except Exception as e:
             logger.warning("BusinessReranker failed, keeping deterministic order: %s", e)
+            deduplicated_patterns = pre_rerank_patterns
+
+        # Safety: never let reranking eliminate all usable deterministic insights.
+        if not deduplicated_patterns and pre_rerank_patterns:
+            logger.warning(
+                "Reranker returned empty shortlist; restoring deterministic candidates (%d).",
+                len(pre_rerank_patterns),
+            )
+            deduplicated_patterns = pre_rerank_patterns
 
         # Re-apply deterministic hard constraints in case reranking disturbed them
         deduplicated_patterns = _enforce_final_top3_constraints(deduplicated_patterns)
 
         # Metric-family diversity filter for final selection (reorders and truncates only)
         deduplicated_patterns = _apply_metric_family_diversity(deduplicated_patterns, desired_count=max_insights)
+        if not deduplicated_patterns and pre_rerank_patterns:
+            logger.warning(
+                "Post-rerank filtering produced no candidates; restoring deterministic candidates (%d).",
+                len(pre_rerank_patterns),
+            )
+            deduplicated_patterns = _apply_metric_family_diversity(
+                pre_rerank_patterns, desired_count=max_insights
+            )
+        logger.info("Final candidate count before narrative: %d", len(deduplicated_patterns))
         
         # ============================================================
         # STEP 5: Grounded Narrative Layer
@@ -635,6 +675,7 @@ def run_full_pipeline(
                     grounded_phrased_insights,
                     deduplicated_patterns
                 )
+                logger.info("Pipeline response status: success (grounded insights=%d)", len(grounded_phrased_insights))
             else:
                 # Grounded narrative produced no insights - log and fall back
                 logger.warning(
@@ -644,6 +685,7 @@ def run_full_pipeline(
                 patterns_dict = convert_scored_patterns_to_dict(deduplicated_patterns)
                 
                 if not patterns_dict:
+                    logger.info("Pipeline response status: error (pattern conversion failed)")
                     return {
                         "success": False,
                         "error": "Failed to convert patterns for analysis.",
@@ -663,6 +705,7 @@ def run_full_pipeline(
                     top_n=max_insights,
                     context=context_dict
                 )
+                logger.info("Pipeline response status: success (fallback strategic path)")
                 
                 # IMPROVEMENT #1: Unified Insight Theme Deduplication (only for Strategic LLM fallback)
                 # Combine all insights (top_priorities + prioritized_insights) for unified deduplication
@@ -760,6 +803,7 @@ def run_full_pipeline(
             }
     
     except FileNotFoundError as e:
+        logger.info("Pipeline response status: error (file not found)")
         return {
             "success": False,
             "error": f"File not found: {str(e)}",
@@ -770,12 +814,14 @@ def run_full_pipeline(
         error_msg = str(e)
         # Remove internal paths and technical details
         if "canonical_structure" in error_msg.lower():
+            logger.info("Pipeline response status: error (invalid data structure)")
             return {
                 "success": False,
                 "error": "Invalid data structure. Please check your file format.",
                 "no_insights": False,
             }
         else:
+            logger.info("Pipeline response status: error (value error)")
             return {
                 "success": False,
                 "error": error_msg,
@@ -788,6 +834,7 @@ def run_full_pipeline(
         if "LLM" in error_msg or "JSON" in error_msg or "invalid" in error_msg.lower():
             # Don't expose raw LLM output or technical details
             if "Raw output" in error_msg:
+                logger.info("Pipeline response status: error (schema interpretation raw output)")
                 return {
                     "success": False,
                     "error": "Unable to process schema interpretation. Please try again or contact support.",
@@ -795,12 +842,14 @@ def run_full_pipeline(
                 }
             else:
                 # Generic error without technical details
+                logger.info("Pipeline response status: error (schema interpretation failed)")
                 return {
                     "success": False,
                     "error": "Schema interpretation failed. Please check your file format and try again.",
                     "no_insights": False,
                 }
         else:
+            logger.info("Pipeline response status: error (runtime error)")
             return {
                 "success": False,
                 "error": error_msg,
@@ -812,12 +861,14 @@ def run_full_pipeline(
         # Remove internal paths and technical stack traces
         if "Traceback" in error_msg or ("File" in error_msg and ".py" in error_msg):
             # This looks like a traceback - show generic error
+            logger.info("Pipeline response status: error (unexpected traceback)")
             return {
                 "success": False,
                 "error": "An unexpected error occurred. Please check your file and try again.",
                 "no_insights": False,
             }
         else:
+            logger.info("Pipeline response status: error (unexpected exception)")
             return {
                 "success": False,
                 "error": error_msg,

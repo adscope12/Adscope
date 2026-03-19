@@ -18,6 +18,34 @@ import pandas as pd
 from ..reading.reading_assistant import SchemaMapping
 
 
+def _apply_builtin_aliases(canonical_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Deterministic fallback aliases for common campaign datasets.
+    Used to stabilize cases where LLM mapping is partial.
+    """
+    alias_map = {
+        "campaign_type": "campaign",
+        "channel_used": "platform",
+        "channel": "platform",
+        "conversion_rate": "cvr",
+        "acquisition_cost": "cpa",
+        "roi": "roas",
+        "customer_segment": "segment",
+        "segment_name": "segment",
+        "engagement_score": "engagement_score",
+    }
+    cols = {c.lower().strip(): c for c in canonical_df.columns}
+    rename_map = {}
+    for src, dst in alias_map.items():
+        src_actual = cols.get(src)
+        dst_actual = cols.get(dst)
+        if src_actual and not dst_actual:
+            rename_map[src_actual] = dst
+    if rename_map:
+        canonical_df = canonical_df.rename(columns=rename_map)
+    return canonical_df
+
+
 def create_canonical_bridge(
     df: pd.DataFrame,
     schema_mapping: SchemaMapping,
@@ -75,6 +103,9 @@ def create_canonical_bridge(
     # Rename columns using mappings (only column names, not data values)
     if column_mapping_dict:
         canonical_df = canonical_df.rename(columns=column_mapping_dict)
+
+    # Deterministic alias fallback for common schemas
+    canonical_df = _apply_builtin_aliases(canonical_df)
     
     # Build value mapping dictionaries by column
     value_mapping_dicts = {}
@@ -104,40 +135,23 @@ def create_canonical_bridge(
                 # This only changes string labels, not numeric data
                 canonical_df[col_name] = canonical_df[col_name].replace(value_map)
     
-    # CRITICAL FIX #4: Required column validation after canonical mapping
-    # Check that canonical DataFrame has minimum required columns for engine
-    # Only 'spend' is required; 'revenue' is optional (determines analysis mode)
-    required_columns = ['spend']  # Minimum required for KPI calculation
+    # Flexible minimum metric validation for broader campaign datasets.
     canonical_columns_lower = [col.lower().strip() for col in canonical_df.columns]
-    missing_required = [
-        req for req in required_columns
-        if req not in canonical_columns_lower
-    ]
+    supported_metric_keys = {
+        "spend", "revenue", "clicks", "impressions", "conversions",
+        "cvr", "cpa", "cpc", "roas", "roi", "engagement_score"
+    }
+    available_metrics = [c for c in canonical_columns_lower if c in supported_metric_keys]
+    if not available_metrics:
+        raise ValueError(
+            "No supported marketing metrics found after canonical mapping. "
+            f"Available columns: {list(canonical_df.columns)}. "
+            "Expected at least one of spend/revenue/clicks/impressions/conversions/"
+            "cvr/cpa/cpc/roas/roi/engagement_score."
+        )
     
-    if missing_required:
-        # Check if columns exist with different casing
-        found_alternatives = []
-        for req in missing_required:
-            for col in canonical_df.columns:
-                if col.lower().strip() == req:
-                    found_alternatives.append(f"'{col}' (maps to '{req}')")
-                    break
-        
-        if found_alternatives:
-            raise ValueError(
-                f"Required columns not found after canonical mapping: {missing_required}. "
-                f"Found similar columns: {', '.join(found_alternatives)}. "
-                f"Please check schema mappings."
-            )
-        else:
-            raise ValueError(
-                f"Required columns not found after canonical mapping: {missing_required}. "
-                f"Available columns: {list(canonical_df.columns)}. "
-                f"Please ensure your file contains spend data."
-            )
-    
-    # Detect analysis mode based on revenue presence
-    has_revenue = 'revenue' in canonical_columns_lower
+    # Detect analysis mode based on revenue/return signal presence
+    has_revenue = 'revenue' in canonical_columns_lower or 'roas' in canonical_columns_lower or 'roi' in canonical_columns_lower
     analysis_mode = "full" if has_revenue else "performance"
     
     # Validate canonical_df is not empty

@@ -164,7 +164,59 @@ class ReadingAssistant:
         mapping_dict = self._call_llm_for_schema(schema_info)
         
         # Parse LLM response into SchemaMapping object
-        return self._parse_llm_response(mapping_dict, schema_info)
+        parsed = self._parse_llm_response(mapping_dict, schema_info)
+        # Deterministic safety net for common campaign aliases
+        return self._augment_with_builtin_aliases(parsed, schema_info)
+
+    def _augment_with_builtin_aliases(
+        self,
+        mapping: SchemaMapping,
+        schema_info: Dict[str, Any],
+    ) -> SchemaMapping:
+        """
+        Add deterministic fallback mappings for common campaign schemas.
+        Improves robustness if the LLM returns partial mappings.
+        """
+        columns = schema_info.get("columns", [])
+        lower_to_original = {str(c).lower().strip(): str(c) for c in columns}
+        existing_originals = {m.original_name for m in mapping.column_mappings}
+        existing_canonicals = {m.canonical_name for m in mapping.column_mappings}
+
+        alias_map = {
+            "campaign_type": ("campaign", "dimension"),
+            "channel_used": ("platform", "dimension"),
+            "channel": ("platform", "dimension"),
+            "customer_segment": ("segment", "dimension"),
+            "segment_name": ("segment", "dimension"),
+            "conversion_rate": ("cvr", "metric"),
+            "acquisition_cost": ("cpa", "metric"),
+            "roi": ("roas", "metric"),
+            "engagement_score": ("engagement_score", "metric"),
+            "date": ("date", "dimension"),
+        }
+
+        for alias, (canonical, field_type) in alias_map.items():
+            original = lower_to_original.get(alias)
+            if not original:
+                continue
+            if original in existing_originals:
+                continue
+            # Avoid duplicate canonical assignment for most fields.
+            if canonical in existing_canonicals and canonical not in {"platform", "segment"}:
+                continue
+            mapping.column_mappings.append(
+                ColumnMapping(
+                    original_name=original,
+                    canonical_name=canonical,
+                    confidence=0.95,
+                    field_type=field_type,
+                    notes="deterministic alias fallback",
+                )
+            )
+            existing_originals.add(original)
+            existing_canonicals.add(canonical)
+
+        return mapping
     
     def _call_llm_for_schema(self, schema_info: Dict[str, Any]) -> Dict[str, Any]:
         """
@@ -201,8 +253,10 @@ class ReadingAssistant:
             "- notes: string with any important observations\n\n"
             
             "Common canonical names:\n"
-            "- Dimensions: campaign, device, platform, date\n"
-            "- Metrics: spend, revenue, clicks, impressions, conversions\n"
+            "- Dimensions: campaign, device, platform, segment, date\n"
+            "- Metrics: spend, revenue, clicks, impressions, conversions, ctr, cvr, cpc, cpa, roas, engagement_score\n"
+            "- Common aliases: campaign_type->campaign, channel_used->platform, customer_segment->segment,\n"
+            "  conversion_rate->cvr, acquisition_cost->cpa, roi->roas\n"
             "- Common platform aliases: google/google ads, facebook/meta/פייסבוק, etc.\n"
             "- Handle Hebrew/English mixed naming\n"
             "- Handle typos and alternate spellings"

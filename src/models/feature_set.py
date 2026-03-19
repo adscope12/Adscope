@@ -16,13 +16,16 @@ class FeatureSet:
     def get_dimensions(self) -> List[str]:
         """Get available dimension columns."""
         # Common dimension columns
-        dimension_candidates = ['campaign', 'device', 'platform', 'date', 'week', 'month']
+        dimension_candidates = [
+            'campaign', 'device', 'platform', 'channel', 'segment', 'customer_segment',
+            'date', 'week', 'month'
+        ]
         return [col for col in dimension_candidates if col in self.data.columns]
     
     def get_kpis(self) -> List[str]:
         """Get available KPI columns."""
         kpi_candidates = [
             'spend', 'revenue', 'clicks', 'impressions', 'conversions',
-            'ctr', 'cvr', 'cpc', 'cpa', 'aov', 'roas'
+            'ctr', 'cvr', 'cpc', 'cpa', 'aov', 'roas', 'roi', 'engagement_score'
         ]
         return [col for col in kpi_candidates if col in self.data.columns]
