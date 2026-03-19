@@ -32,6 +32,8 @@ def _build_headline(
     direction: str,
     dimension: str,
     time_period: Optional[Dict[str, Any]],
+    observed_value: float,
+    baseline_value: float,
 ) -> str:
     """
     Build a specific, readable headline using available fields.
@@ -59,13 +61,26 @@ def _build_headline(
             verb = "improved" if direction == "positive" else "declined" if direction == "negative" else "shifted"
             return f"{metric_display} {verb} from {start} to {end}"
 
+    # Numeric framing when baseline is available and meaningful
+    if baseline_value not in (None, 0):
+        try:
+            ratio = observed_value / baseline_value
+            if ratio >= 1.5 and direction == "positive":
+                return f"{metric_display} increased {ratio:.1f}x"
+            if ratio <= (1 / 1.5) and direction == "negative":
+                inv = baseline_value / observed_value if observed_value else 0
+                if inv > 0:
+                    return f"{metric_display} dropped {inv:.1f}x"
+        except Exception:
+            pass
+
     if direction == "positive":
         if seg != "this segment":
-            return f"{seg} {metric_display} outperformed {comp}"
+            return f"{seg} outperformed {comp} in {metric_display}"
         return f"{metric_display} outperformed {comp}"
     elif direction == "negative":
         if seg != "this segment":
-            return f"{seg} {metric_display} underperformed versus {comp}"
+            return f"{seg} underperformed {comp} in {metric_display}"
         return f"{metric_display} underperformed versus {comp}"
     else:
         if seg != "this segment":
@@ -96,23 +111,45 @@ def generate_fallback_phrasing(structured_payload: Dict[str, Any]) -> Dict[str, 
     time_period = structured_payload.get("time_period")
     
     # Generate headline (specific, avoids vague placeholders)
-    headline = _build_headline(segment, comparison_target, primary_metric, direction, dimension, time_period)
+    headline = _build_headline(
+        segment,
+        comparison_target,
+        primary_metric,
+        direction,
+        dimension,
+        time_period,
+        observed_value,
+        baseline_value,
+    )
     
     # Generate what_is_happening
     metric_display = primary_metric.upper() if len(primary_metric) <= 4 else primary_metric.title()
     
     if baseline_value is not None and baseline_value != 0:
         pct_change = abs((observed_value - baseline_value) / baseline_value * 100)
+        ratio = observed_value / baseline_value if baseline_value else None
         if direction == "positive":
-            what_is_happening = (
-                f"{_normalize_segment(segment)} shows stronger {metric_display} than {comparison_target}, "
-                f"with {observed_value:.2f} vs {baseline_value:.2f} ({pct_change:.0f}% difference)."
-            )
+            if ratio and ratio >= 1.5:
+                what_is_happening = (
+                    f"{_normalize_segment(segment)} reached {observed_value:.2f} vs {baseline_value:.2f} "
+                    f"for {comparison_target} ({ratio:.1f}x, {pct_change:.0f}% higher)."
+                )
+            else:
+                what_is_happening = (
+                    f"{_normalize_segment(segment)} reached {observed_value:.2f} vs {baseline_value:.2f} "
+                    f"for {comparison_target} ({pct_change:.0f}% higher)."
+                )
         else:
-            what_is_happening = (
-                f"{_normalize_segment(segment)} shows weaker {metric_display} than {comparison_target}, "
-                f"with {observed_value:.2f} vs {baseline_value:.2f} ({pct_change:.0f}% difference)."
-            )
+            if observed_value not in (None, 0) and baseline_value and baseline_value / observed_value >= 1.5:
+                what_is_happening = (
+                    f"{_normalize_segment(segment)} reached {observed_value:.2f} vs {baseline_value:.2f} "
+                    f"for {comparison_target} ({baseline_value / observed_value:.1f}x lower, {pct_change:.0f}% decline)."
+                )
+            else:
+                what_is_happening = (
+                    f"{_normalize_segment(segment)} reached {observed_value:.2f} vs {baseline_value:.2f} "
+                    f"for {comparison_target} ({pct_change:.0f}% lower)."
+                )
     else:
         what_is_happening = (
             f"{_normalize_segment(segment)} shows {metric_display} of {observed_value:.2f}, "

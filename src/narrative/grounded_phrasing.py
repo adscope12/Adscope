@@ -7,6 +7,7 @@ with validation and fallback templates.
 
 import json
 import os
+import re
 from typing import Dict, Any, List, Optional
 from pathlib import Path
 from dotenv import load_dotenv
@@ -50,6 +51,46 @@ def _make_json_serializable(obj: Any) -> Any:
     if isinstance(obj, (list, tuple)):
         return [_make_json_serializable(item) for item in obj]
     return obj
+
+
+def _cleanup_generic_phrasing(phrased: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Lightweight post-processing to remove repetitive generic wording.
+    Does not add new facts; only rewrites boilerplate phrases.
+    """
+    cleaned = dict(phrased)
+
+    replacements = {
+        "This represents a positive direction in performance.": "Performance improved relative to the baseline.",
+        "This represents a negative direction in performance.": "Performance weakened relative to the baseline.",
+        "This shows a positive direction in revenue performance.": "Revenue improved relative to the baseline.",
+        "This shows a negative direction in revenue performance.": "Revenue declined relative to the baseline.",
+        "This represents a positive change in performance.": "Performance improved relative to the baseline.",
+        "This represents a negative change in performance.": "Performance weakened relative to the baseline.",
+        "This shows a positive direction in performance compared to Mobile.": "Performance versus Mobile improved relative to the baseline.",
+        "This shows a negative direction in performance compared to Mobile.": "Performance versus Mobile weakened relative to the baseline.",
+        "This reflects a positive direction in conversion efficiency.": "Conversion efficiency improved relative to the baseline.",
+        "This reflects a negative direction in conversion efficiency.": "Conversion efficiency weakened relative to the baseline.",
+        "This reflects a positive direction in revenue performance.": "Revenue improved relative to the baseline.",
+        "This reflects a negative direction in revenue performance.": "Revenue weakened relative to the baseline.",
+        "This represents a positive change in conversion efficiency compared to Mobile.": "Conversion efficiency versus Mobile improved relative to the baseline.",
+        "This represents a negative change in conversion efficiency compared to Mobile.": "Conversion efficiency versus Mobile weakened relative to the baseline.",
+        "versus the comparison target": "relative to the baseline",
+        "increased versus the comparison target": "increased materially",
+        "decreased versus the comparison target": "decreased materially",
+        "outcome volume increased versus the comparison target": "Outcome volume increased materially",
+        "outcome volume decreased versus the comparison target": "Outcome volume decreased materially",
+    }
+
+    for key in ["headline", "what_is_happening", "why_it_matters"]:
+        text = str(cleaned.get(key, "") or "")
+        for src, dst in replacements.items():
+            text = text.replace(src, dst)
+        # Collapse repeated spaces from replacements
+        text = re.sub(r"\s{2,}", " ", text).strip()
+        cleaned[key] = text
+
+    return cleaned
 
 
 class GroundedNarrativeLayer:
@@ -116,18 +157,18 @@ class GroundedNarrativeLayer:
                     total_length = sum(len(str(v)) for v in llm_output.values())
                     if total_length > 500:  # Suspiciously long output
                         fallback_output = generate_fallback_phrasing(payload)
-                        phrased_insights.append(fallback_output)
+                        phrased_insights.append(_cleanup_generic_phrasing(fallback_output))
                     else:
                         phrased_insights.append(llm_output)
                 else:
                     # Validation failed - use fallback
                     fallback_output = generate_fallback_phrasing(payload)
-                    phrased_insights.append(fallback_output)
+                    phrased_insights.append(_cleanup_generic_phrasing(fallback_output))
             
             except Exception as e:
                 # LLM failed - use fallback (any exception triggers fallback)
                 fallback_output = generate_fallback_phrasing(payload)
-                phrased_insights.append(fallback_output)
+                phrased_insights.append(_cleanup_generic_phrasing(fallback_output))
         
         return phrased_insights
     
@@ -148,7 +189,9 @@ class GroundedNarrativeLayer:
             "5) Use only the allowed_narrative_tags for phrasing style. "
             "6) Keep output concise and business-readable. "
             "7) Output MUST be valid JSON only (no markdown, no extra text). "
-            "8) Stay observational: describe what happened, not why it happened or what it implies beyond safe_business_interpretation."
+            "8) Stay observational: describe what happened, not why it happened or what it implies beyond safe_business_interpretation. "
+            "9) Avoid generic wording such as 'positive direction in performance' or 'versus the comparison target'. "
+            "10) Prefer short, outcome-driven headlines; include concrete numbers only when present in allowed fields."
         )
         
         # Extract only allowed fields for reference
@@ -168,10 +211,15 @@ class GroundedNarrativeLayer:
         
         user = (
             "Given this structured insight payload, return a JSON object with:\n"
-            '- "headline": one short sentence (max 15 words)\n'
+            '- "headline": one short sentence (max 12 words), outcome-first and specific\n'
             '- "what_is_happening": 1-2 sentences describing the pattern using ONLY the allowed fields below\n'
             '- "why_it_matters": 1 sentence using ONLY safe_business_interpretation from the payload\n'
             '- "next_check": copy safe_action_hint exactly (or rephrase minimally if needed for readability)\n'
+            "\n"
+            "Headline quality rules:\n"
+            "- Prefer concrete business phrasing (e.g., 'X outperformed Y in Z').\n"
+            "- If temporal and numeric values are present, concise numeric framing is preferred (e.g., 'ROAS increased 2.5x').\n"
+            "- Avoid generic templates like 'positive direction in performance'.\n"
             "\n"
             "ALLOWED FIELDS (use ONLY these):\n"
             f"{json.dumps(allowed_fields, ensure_ascii=False, indent=2)}\n"
@@ -240,4 +288,4 @@ class GroundedNarrativeLayer:
             if field not in result:
                 result[field] = ""
         
-        return result
+        return _cleanup_generic_phrasing(result)

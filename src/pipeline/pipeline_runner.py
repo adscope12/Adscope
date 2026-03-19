@@ -273,11 +273,28 @@ def _build_strategic_result_from_grounded(
         Strategic result dict compatible with existing format
     """
     # Convert grounded insights to prioritized_insights format
+    def _compose_summary(what: str, why: str) -> str:
+        what = (what or "").strip()
+        why = (why or "").strip()
+        if not what:
+            return why
+        if not why:
+            return what
+        # Avoid repeated sentences when what/why are near-identical after cleanup.
+        if why.lower() in what.lower():
+            return what
+        if what.lower() in why.lower():
+            return why
+        return f"{what} {why}".strip()
+
     prioritized_insights = []
     for i, grounded in enumerate(grounded_insights):
         prioritized_insights.append({
             "title": grounded.get("headline", ""),
-            "summary": f"{grounded.get('what_is_happening', '')} {grounded.get('why_it_matters', '')}".strip(),
+            "summary": _compose_summary(
+                grounded.get("what_is_happening", ""),
+                grounded.get("why_it_matters", ""),
+            ),
             "recommended_actions": [grounded.get("next_check", "")] if grounded.get("next_check") else [],
             "confidence": 0.8  # Default confidence for grounded insights
         })
