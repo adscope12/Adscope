@@ -1,0 +1,183 @@
+Running ./test_data/t24_pattern_mobile_underperform.csv
+
+=== RERANK: Shortlist BEFORE LLM ===
+- id=TEMPORAL_CHANGE_date_2024-01-14 00:00:00_cvr, composite_score=0.6006866289379511
+- id=SPIKE_DROP_date_2024-01-10 00:00:00_revenue, composite_score=0.35492051198078295
+- id=SEGMENT_GAP_device_Desktop_Mobile_cvr, composite_score=0.34220093732597245
+
+=== RERANK: LLM RESPONSE ===
+ranked_ids   = ['TEMPORAL_CHANGE_date_2024-01-14 00:00:00_cvr', 'SEGMENT_GAP_device_Desktop_Mobile_cvr', 'SPIKE_DROP_date_2024-01-10 00:00:00_revenue']
+duplicate_ids= []
+top_3_ids    = ['TEMPORAL_CHANGE_date_2024-01-14 00:00:00_cvr', 'SEGMENT_GAP_device_Desktop_Mobile_cvr', 'SPIKE_DROP_date_2024-01-10 00:00:00_revenue']
+
+=== RERANK: FINAL TOP 3 ===
+- id=TEMPORAL_CHANGE_date_2024-01-14 00:00:00_cvr, composite_score=0.6006866289379511
+- id=SEGMENT_GAP_device_Desktop_Mobile_cvr, composite_score=0.34220093732597245
+- id=SPIKE_DROP_date_2024-01-10 00:00:00_revenue, composite_score=0.35492051198078295
+=== END RERANK DEBUG ===
+
+{
+  "executive_summary": "Top insights: Conversion efficiency improved on January 14, 2024; Desktop conversion rate improved compared to Mobile; Revenue increased significantly on January 10, 2024.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Conversion efficiency improved on January 14, 2024.",
+      "why_it_matters": "Conversion efficiency improved versus the comparison target (higher CVR).",
+      "expected_impact": "The conversion rate (CVR) increased to 0.058 from a baseline of 0.024. This represents a positive direction in conversion efficiency."
+    },
+    {
+      "issue_opportunity": "Desktop conversion rate improved compared to Mobile.",
+      "why_it_matters": "Conversion efficiency improved versus the comparison target (higher CVR).",
+      "expected_impact": "Desktop showed a positive change in conversion rate (CVR) at 0.0555, compared to Mobile's baseline of 0.0249. This reflects an improvement in conversion efficiency."
+    },
+    {
+      "issue_opportunity": "Revenue increased significantly on January 10, 2024.",
+      "why_it_matters": "Business output increased versus the comparison target (higher revenue).",
+      "expected_impact": "Revenue observed on January 10, 2024, was 810.0, compared to a baseline of 489.23. This represents a positive direction in performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-13 to 2024-01-14 for cvr (budget, targeting, and delivery) and validate the pattern.",
+    "Review device targeting and budget split for cvr differences.",
+    "Review what changed around 2024-01-10 for revenue (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Conversion efficiency improved on January 14, 2024.",
+      "summary": "The conversion rate (CVR) increased to 0.058 from a baseline of 0.024. This represents a positive direction in conversion efficiency. Conversion efficiency improved versus the comparison target (higher CVR).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for cvr (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Desktop conversion rate improved compared to Mobile.",
+      "summary": "Desktop showed a positive change in conversion rate (CVR) at 0.0555, compared to Mobile's baseline of 0.0249. This reflects an improvement in conversion efficiency. Conversion efficiency improved versus the comparison target (higher CVR).",
+      "recommended_actions": [
+        "Review device targeting and budget split for cvr differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue increased significantly on January 10, 2024.",
+      "summary": "Revenue observed on January 10, 2024, was 810.0, compared to a baseline of 489.23. This represents a positive direction in performance. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-10 for revenue (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t22_pattern_winning_campaign.csv
+
+=== RERANK: Shortlist BEFORE LLM ===
+- id=TEMPORAL_CHANGE_date_2024-01-14 00:00:00_roas, composite_score=0.6546648978943402
+- id=SEGMENT_GAP_campaign_Summer Sale_Winter Promo_cvr, composite_score=0.44317720916368036
+
+=== RERANK: LLM RESPONSE ===
+ranked_ids   = ['TEMPORAL_CHANGE_date_2024-01-14 00:00:00_roas', 'SEGMENT_GAP_campaign_Summer Sale_Winter Promo_cvr']
+duplicate_ids= []
+top_3_ids    = ['TEMPORAL_CHANGE_date_2024-01-14 00:00:00_roas', 'SEGMENT_GAP_campaign_Summer Sale_Winter Promo_cvr']
+
+=== RERANK: FINAL TOP 3 ===
+- id=TEMPORAL_CHANGE_date_2024-01-14 00:00:00_roas, composite_score=0.6546648978943402
+- id=SEGMENT_GAP_campaign_Summer Sale_Winter Promo_cvr, composite_score=0.44317720916368036
+=== END RERANK DEBUG ===
+
+{
+  "executive_summary": "Top insights: ROAS improved significantly from January 13 to January 14; Summer Sale shows improved conversion efficiency over Winter Promo.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "ROAS improved significantly from January 13 to January 14.",
+      "why_it_matters": "Return on ad spend improved versus the comparison target (higher ROAS).",
+      "expected_impact": "Return on ad spend (ROAS) increased from 1.6 to 4.0. This represents a positive direction in performance."
+    },
+    {
+      "issue_opportunity": "Summer Sale shows improved conversion efficiency over Winter Promo.",
+      "why_it_matters": "Conversion efficiency improved versus the comparison target (higher CVR).",
+      "expected_impact": "The Summer Sale segment has a conversion rate (CVR) of 0.0898, compared to the Winter Promo's baseline of 0.0289. This represents a positive direction in conversion efficiency."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-13 to 2024-01-14 for roas (budget, targeting, and delivery) and validate the pattern.",
+    "Compare budget and settings between Summer Sale and Winter Promo for cvr drivers."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "ROAS improved significantly from January 13 to January 14.",
+      "summary": "Return on ad spend (ROAS) increased from 1.6 to 4.0. This represents a positive direction in performance. Return on ad spend improved versus the comparison target (higher ROAS).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for roas (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Summer Sale shows improved conversion efficiency over Winter Promo.",
+      "summary": "The Summer Sale segment has a conversion rate (CVR) of 0.0898, compared to the Winter Promo's baseline of 0.0289. This represents a positive direction in conversion efficiency. Conversion efficiency improved versus the comparison target (higher CVR).",
+      "recommended_actions": [
+        "Compare budget and settings between Summer Sale and Winter Promo for cvr drivers."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t26_temporal_weekend_drop.csv
+
+=== RERANK: Shortlist BEFORE LLM ===
+- id=WEEKEND_WEEKDAY_cpa, composite_score=0.4345906221523098
+- id=WEEKEND_WEEKDAY_revenue, composite_score=0.37839261130259444
+
+=== RERANK: LLM RESPONSE ===
+ranked_ids   = ['WEEKEND_WEEKDAY_cpa', 'WEEKEND_WEEKDAY_revenue']
+duplicate_ids= []
+top_3_ids    = ['WEEKEND_WEEKDAY_cpa', 'WEEKEND_WEEKDAY_revenue']
+
+=== RERANK: FINAL TOP 3 ===
+- id=WEEKEND_WEEKDAY_cpa, composite_score=0.4345906221523098
+- id=WEEKEND_WEEKDAY_revenue, composite_score=0.37839261130259444
+=== END RERANK DEBUG ===
+
+{
+  "executive_summary": "Top insights: Weekend CPA is significantly higher than weekday CPA; Revenue decreased on weekends compared to weekdays.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Weekend CPA is significantly higher than weekday CPA.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "The observed CPA for the weekend is 22.8125, compared to a baseline of 10.0 for weekdays. This shows a negative direction in acquisition cost efficiency."
+    },
+    {
+      "issue_opportunity": "Revenue decreased on weekends compared to weekdays.",
+      "why_it_matters": "Business output decreased versus the comparison target (lower revenue).",
+      "expected_impact": "Revenue for the weekend segment is 168.75, which is lower than the baseline value of 735.0 for weekdays. This represents a negative direction in performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review time-based performance patterns and scheduling."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Weekend CPA is significantly higher than weekday CPA.",
+      "summary": "The observed CPA for the weekend is 22.8125, compared to a baseline of 10.0 for weekdays. This shows a negative direction in acquisition cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review time-based performance patterns and scheduling."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue decreased on weekends compared to weekdays.",
+      "summary": "Revenue for the weekend segment is 168.75, which is lower than the baseline value of 735.0 for weekdays. This represents a negative direction in performance. Business output decreased versus the comparison target (lower revenue).",
+      "recommended_actions": [
+        "Review time-based performance patterns and scheduling."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------

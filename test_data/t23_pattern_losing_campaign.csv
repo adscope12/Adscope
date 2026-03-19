@@ -1,0 +1,15 @@
+date,campaign,platform,device,spend,revenue,clicks,impressions,conversions
+2024-01-01,Summer Sale,Google,Mobile,200.00,800.00,400,15000,32
+2024-01-02,Summer Sale,Google,Desktop,180.00,720.00,350,12000,28
+2024-01-03,Summer Sale,Facebook,Mobile,150.00,600.00,280,10000,24
+2024-01-04,Winter Promo,Google,Mobile,200.00,120.00,400,15000,4
+2024-01-05,Winter Promo,Google,Desktop,180.00,108.00,350,12000,3
+2024-01-06,Winter Promo,Facebook,Mobile,150.00,90.00,280,10000,2
+2024-01-07,Spring Launch,Google,Mobile,200.00,140.00,400,15000,5
+2024-01-08,Spring Launch,Google,Desktop,180.00,126.00,350,12000,4
+2024-01-09,Spring Launch,Facebook,Mobile,150.00,105.00,280,10000,3
+2024-01-10,Summer Sale,Google,Mobile,210.00,840.00,420,16000,34
+2024-01-11,Summer Sale,Facebook,Desktop,160.00,640.00,240,9000,25
+2024-01-12,Winter Promo,Google,Mobile,210.00,126.00,420,16000,4
+2024-01-13,Spring Launch,Google,Mobile,220.00,154.00,440,17000,5
+2024-01-14,Summer Sale,Facebook,Desktop,170.00,680.00,250,9500,27

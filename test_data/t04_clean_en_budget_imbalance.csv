@@ -1,0 +1,15 @@
+date,campaign,platform,device,spend,revenue,clicks,impressions,conversions
+2024-01-01,Campaign A,Google,Mobile,500.00,1200.00,800,35000,40
+2024-01-02,Campaign A,Google,Desktop,450.00,1350.00,700,30000,45
+2024-01-03,Campaign A,Facebook,Mobile,50.00,60.00,100,4000,2
+2024-01-04,Campaign A,Facebook,Desktop,40.00,50.00,80,3500,1
+2024-01-05,Campaign B,Google,Mobile,480.00,1150.00,780,34000,38
+2024-01-06,Campaign B,Google,Desktop,420.00,1260.00,680,29000,42
+2024-01-07,Campaign B,Facebook,Mobile,45.00,55.00,95,3800,2
+2024-01-08,Campaign B,Facebook,Desktop,35.00,45.00,75,3200,1
+2024-01-09,Campaign C,Google,Mobile,520.00,1250.00,820,36000,41
+2024-01-10,Campaign C,Google,Desktop,470.00,1410.00,720,31000,47
+2024-01-11,Campaign C,Facebook,Mobile,55.00,65.00,105,4200,2
+2024-01-12,Campaign C,Facebook,Desktop,42.00,52.00,85,3600,1
+2024-01-13,Campaign A,Google,Mobile,510.00,1220.00,810,35500,40
+2024-01-14,Campaign A,Facebook,Desktop,38.00,48.00,78,3300,1

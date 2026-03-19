@@ -1,0 +1,2065 @@
+Running ./test_data/t01_clean_en_single_campaign.csv
+{
+  "executive_summary": "Top insights: Conversions increased significantly in early January 2024; Revenue increased significantly in early January 2024; Conversions increased significantly on January 10, 2024.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Conversions increased significantly in early January 2024.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "During the segment from 2024-01-09 to 2024-01-14, conversions averaged 11.33, up from a baseline of 5.5 during 2024-01-05 to 2024-01-08. This represents a positive direction in performance metrics."
+    },
+    {
+      "issue_opportunity": "Revenue increased significantly in early January 2024.",
+      "why_it_matters": "Business output increased versus the comparison target (higher revenue).",
+      "expected_impact": "Revenue observed from January 9 to January 14 is 443.33, which is a positive change from the baseline value of 272.5 observed from January 5 to January 8. This pattern shows higher revenue performance."
+    },
+    {
+      "issue_opportunity": "Conversions increased significantly on January 10, 2024.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Conversions observed on January 10, 2024, were 18.0, compared to a baseline of 8.92. This represents a positive direction in performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-01 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-01 to 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-10 for conversions (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-07 for cpa (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Conversions increased significantly in early January 2024.",
+      "summary": "During the segment from 2024-01-09 to 2024-01-14, conversions averaged 11.33, up from a baseline of 5.5 during 2024-01-05 to 2024-01-08. This represents a positive direction in performance metrics. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue increased significantly in early January 2024.",
+      "summary": "Revenue observed from January 9 to January 14 is 443.33, which is a positive change from the baseline value of 272.5 observed from January 5 to January 8. This pattern shows higher revenue performance. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Conversions increased significantly on January 10, 2024.",
+      "summary": "Conversions observed on January 10, 2024, were 18.0, compared to a baseline of 8.92. This represents a positive direction in performance. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-10 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Acquisition cost efficiency worsened on January 7, 2024.",
+      "summary": "The observed CPA is 40.0, which is higher than the baseline value of 19.95. This represents a negative direction in cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-07 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t02_clean_en_multi_campaign.csv
+{
+  "executive_summary": "Top insights: Spring Launch shows significant increase in conversions; Spring Launch revenue surpasses Winter Promo significantly; Acquisition cost efficiency worsened on January 6, 2024.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Spring Launch shows significant increase in conversions.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Spring Launch achieved 18.8 conversions, compared to 3.2 for Winter Promo. This represents a positive direction in performance."
+    },
+    {
+      "issue_opportunity": "Spring Launch revenue surpasses Winter Promo significantly.",
+      "why_it_matters": "Business output increased versus the comparison target (higher revenue).",
+      "expected_impact": "Spring Launch generated revenue of 586.0, compared to 156.0 from Winter Promo. This represents a positive direction in revenue performance."
+    },
+    {
+      "issue_opportunity": "Acquisition cost efficiency worsened on January 6, 2024.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "The observed CPA is 40.0, which is higher than the baseline value of 19.42. This represents a negative direction in cost efficiency."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Compare budget and settings between Spring Launch and Winter Promo for conversions drivers.",
+    "Compare budget and settings between Spring Launch and Winter Promo for revenue drivers.",
+    "Review what changed around 2024-01-06 for cpa (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-14 to 2024-01-15 for cpa (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Spring Launch shows significant increase in conversions.",
+      "summary": "Spring Launch achieved 18.8 conversions, compared to 3.2 for Winter Promo. This represents a positive direction in performance. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Compare budget and settings between Spring Launch and Winter Promo for conversions drivers."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Spring Launch revenue surpasses Winter Promo significantly.",
+      "summary": "Spring Launch generated revenue of 586.0, compared to 156.0 from Winter Promo. This represents a positive direction in revenue performance. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Compare budget and settings between Spring Launch and Winter Promo for revenue drivers."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Acquisition cost efficiency worsened on January 6, 2024.",
+      "summary": "The observed CPA is 40.0, which is higher than the baseline value of 19.42. This represents a negative direction in cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-06 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Acquisition cost efficiency worsened on January 15, 2024.",
+      "summary": "The CPA observed on January 15, 2024, was 17.27, compared to a baseline of 10.0. This represents a negative direction in acquisition cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-14 to 2024-01-15 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t03_clean_en_platform_device.csv
+{
+  "executive_summary": "Top insights: Acquisition cost efficiency worsened on January 14, 2024; Google conversions significantly outperformed Facebook; Google revenue surpasses Facebook significantly.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Acquisition cost efficiency worsened on January 14, 2024.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "The CPA observed on January 14, 2024, was 30.83, compared to a baseline of 10.0. This represents a negative direction in acquisition cost efficiency."
+    },
+    {
+      "issue_opportunity": "Google conversions significantly outperformed Facebook.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Google showed higher conversions at 28.14 compared to Facebook's baseline of 7.57. The direction is positive."
+    },
+    {
+      "issue_opportunity": "Google revenue surpasses Facebook significantly.",
+      "why_it_matters": "Business output increased versus the comparison target (higher revenue).",
+      "expected_impact": "Google's revenue observed value is 844.29, while Facebook's baseline value is 326.79. This represents a positive direction in performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-13 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern.",
+    "Review platform-level budget allocation and delivery for conversions differences.",
+    "Review platform-level budget allocation and delivery for revenue differences.",
+    "Review what changed around 2024-01-13 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Acquisition cost efficiency worsened on January 14, 2024.",
+      "summary": "The CPA observed on January 14, 2024, was 30.83, compared to a baseline of 10.0. This represents a negative direction in acquisition cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google conversions significantly outperformed Facebook.",
+      "summary": "Google showed higher conversions at 28.14 compared to Facebook's baseline of 7.57. The direction is positive. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for conversions differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google revenue surpasses Facebook significantly.",
+      "summary": "Google's revenue observed value is 844.29, while Facebook's baseline value is 326.79. This represents a positive direction in performance. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for revenue differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Conversions decreased significantly from January 13 to January 14.",
+      "summary": "Conversions observed on January 14 were 6.0, down from 31.0 on January 13. This represents a negative change in outcome volume. Outcome volume decreased versus the comparison target (fewer conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t04_clean_en_budget_imbalance.csv
+{
+  "executive_summary": "Top insights: Google revenue significantly outperformed Facebook; Google outperformed Facebook in conversions; Acquisition cost efficiency worsened significantly.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Google revenue significantly outperformed Facebook.",
+      "why_it_matters": "Business output increased versus the comparison target (higher revenue).",
+      "expected_impact": "Google showed higher revenue at 1262.86 compared to Facebook's baseline of 53.57. This represents a positive direction in performance."
+    },
+    {
+      "issue_opportunity": "Google outperformed Facebook in conversions.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Google showed higher conversions with an observed value of 41.86 compared to Facebook's baseline of 1.43. This reflects a positive direction in performance."
+    },
+    {
+      "issue_opportunity": "Acquisition cost efficiency worsened significantly.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "The CPA increased from 12.75 to 38.0 between 2024-01-13 and 2024-01-14. This represents a negative direction in cost efficiency."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review platform-level budget allocation and delivery for revenue differences.",
+    "Review platform-level budget allocation and delivery for conversions differences.",
+    "Review what changed around 2024-01-13 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-13 to 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Google revenue significantly outperformed Facebook.",
+      "summary": "Google showed higher revenue at 1262.86 compared to Facebook's baseline of 53.57. This represents a positive direction in performance. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for revenue differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google outperformed Facebook in conversions.",
+      "summary": "Google showed higher conversions with an observed value of 41.86 compared to Facebook's baseline of 1.43. This reflects a positive direction in performance. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for conversions differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Acquisition cost efficiency worsened significantly.",
+      "summary": "The CPA increased from 12.75 to 38.0 between 2024-01-13 and 2024-01-14. This represents a negative direction in cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue decreased significantly on January 14, 2024.",
+      "summary": "Revenue observed on January 14, 2024, was 48.0, a decrease from 1220.0 on January 13, 2024. This represents a negative direction in performance. Business output decreased versus the comparison target (lower revenue).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t05_clean_en_ctr_high_cvr_low.csv
+{
+  "executive_summary": "Top insight: Conversions increased on January 9, 2024.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Conversions increased on January 9, 2024.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Conversions observed on January 9, 2024, were 4.0, compared to a baseline of 2.31. This shows a positive direction in performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-09 for conversions (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Conversions increased on January 9, 2024.",
+      "summary": "Conversions observed on January 9, 2024, were 4.0, compared to a baseline of 2.31. This shows a positive direction in performance. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-09 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t06_clean_he_single_campaign.csv
+
+================================================================================
+NO INSIGHTS FOUND
+================================================================================
+
+The deterministic engine did not find any statistically significant patterns. This may occur if the dataset is too small, has insufficient variation, all segments perform similarly, or required metrics (spend, revenue) are missing.
+
+This may occur if:
+  • The dataset is too small or has insufficient variation
+  • All segments perform similarly
+  • Required metrics (spend, revenue) are missing or invalid
+
+Please check your data and try again.
+================================================================================
+---------------------
+Running ./test_data/t07_clean_he_multi_campaign.csv
+
+================================================================================
+NO INSIGHTS FOUND
+================================================================================
+
+The deterministic engine did not find any statistically significant patterns. This may occur if the dataset is too small, has insufficient variation, all segments perform similarly, or required metrics (spend, revenue) are missing.
+
+This may occur if:
+  • The dataset is too small or has insufficient variation
+  • All segments perform similarly
+  • Required metrics (spend, revenue) are missing or invalid
+
+Please check your data and try again.
+================================================================================
+---------------------
+Running ./test_data/t08_clean_he_platform_device.csv
+
+================================================================================
+NO INSIGHTS FOUND
+================================================================================
+
+The deterministic engine did not find any statistically significant patterns. This may occur if the dataset is too small, has insufficient variation, all segments perform similarly, or required metrics (spend, revenue) are missing.
+
+This may occur if:
+  • The dataset is too small or has insufficient variation
+  • All segments perform similarly
+  • Required metrics (spend, revenue) are missing or invalid
+
+Please check your data and try again.
+================================================================================
+---------------------
+Running ./test_data/t09_clean_he_budget_imbalance.csv
+
+================================================================================
+NO INSIGHTS FOUND
+================================================================================
+
+The deterministic engine did not find any statistically significant patterns. This may occur if the dataset is too small, has insufficient variation, all segments perform similarly, or required metrics (spend, revenue) are missing.
+
+This may occur if:
+  • The dataset is too small or has insufficient variation
+  • All segments perform similarly
+  • Required metrics (spend, revenue) are missing or invalid
+
+Please check your data and try again.
+================================================================================
+---------------------
+Running ./test_data/t10_clean_he_weekend_drop.csv
+
+================================================================================
+NO INSIGHTS FOUND
+================================================================================
+
+The deterministic engine did not find any statistically significant patterns. This may occur if the dataset is too small, has insufficient variation, all segments perform similarly, or required metrics (spend, revenue) are missing.
+
+This may occur if:
+  • The dataset is too small or has insufficient variation
+  • All segments perform similarly
+  • Required metrics (spend, revenue) are missing or invalid
+
+Please check your data and try again.
+================================================================================
+---------------------
+Running ./test_data/t11_mixed_lang_campaigns.csv
+{
+  "executive_summary": "Top insights: Acquisition cost efficiency worsened in early January 2024; Summer Promo outperforms Winter Promo in conversions; Google outperformed Facebook in conversions.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Acquisition cost efficiency worsened in early January 2024.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "From January 8 to January 14, the CPA was 30.26, which is higher than the baseline CPA of 15.25 from January 1 to January 7. This represents a negative direction in cost efficiency."
+    },
+    {
+      "issue_opportunity": "Summer Promo outperforms Winter Promo in conversions.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "The segment 'מבצע קיץ' showed 17.0 conversions compared to the baseline value of 3.5 from 'Winter Promo'. This represents a positive direction in performance."
+    },
+    {
+      "issue_opportunity": "Google outperformed Facebook in conversions.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Google showed higher conversions at 16.14 compared to Facebook's 5.29. The observed value reflects a positive direction."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-01 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern.",
+    "Compare budget and settings between מבצע קיץ and Winter Promo for conversions drivers.",
+    "Review platform-level budget allocation and delivery for conversions differences.",
+    "Review what changed around 2024-01-01 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Acquisition cost efficiency worsened in early January 2024.",
+      "summary": "From January 8 to January 14, the CPA was 30.26, which is higher than the baseline CPA of 15.25 from January 1 to January 7. This represents a negative direction in cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Summer Promo outperforms Winter Promo in conversions.",
+      "summary": "The segment 'מבצע קיץ' showed 17.0 conversions compared to the baseline value of 3.5 from 'Winter Promo'. This represents a positive direction in performance. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Compare budget and settings between מבצע קיץ and Winter Promo for conversions drivers."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google outperformed Facebook in conversions.",
+      "summary": "Google showed higher conversions at 16.14 compared to Facebook's 5.29. The observed value reflects a positive direction. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for conversions differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Conversions decreased in early January 2024.",
+      "summary": "From January 8 to January 14, conversions were 6.14, down from 15.29 during January 1 to January 7. This represents a negative trend in conversion performance. Outcome volume decreased versus the comparison target (fewer conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t12_mixed_lang_platforms.csv
+{
+  "executive_summary": "Top insights: Acquisition cost efficiency worsened on January 14, 2024; Google outperformed פייסבוק in conversions; Google revenue outperforms Facebook significantly.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Acquisition cost efficiency worsened on January 14, 2024.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "The CPA observed on January 14, 2024, was 30.83, compared to a baseline of 10.0. This represents a negative direction in acquisition cost efficiency."
+    },
+    {
+      "issue_opportunity": "Google outperformed פייסבוק in conversions.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Google showed higher conversions at 30.25 compared to פייסבוק's 5.75. The performance direction is positive."
+    },
+    {
+      "issue_opportunity": "Google revenue outperforms Facebook significantly.",
+      "why_it_matters": "Business output increased versus the comparison target (higher revenue).",
+      "expected_impact": "Google generated revenue of 907.5, compared to Facebook's baseline of 271.875. This represents a positive direction in performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-13 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern.",
+    "Review platform-level budget allocation and delivery for conversions differences.",
+    "Review platform-level budget allocation and delivery for revenue differences.",
+    "Review what changed around 2024-01-13 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Acquisition cost efficiency worsened on January 14, 2024.",
+      "summary": "The CPA observed on January 14, 2024, was 30.83, compared to a baseline of 10.0. This represents a negative direction in acquisition cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google outperformed פייסבוק in conversions.",
+      "summary": "Google showed higher conversions at 30.25 compared to פייסבוק's 5.75. The performance direction is positive. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for conversions differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google revenue outperforms Facebook significantly.",
+      "summary": "Google generated revenue of 907.5, compared to Facebook's baseline of 271.875. This represents a positive direction in performance. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for revenue differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Conversions decreased significantly from January 13 to January 14.",
+      "summary": "Conversions observed on January 14 were 6.0, down from 31.0 on January 13. This represents a negative change in outcome volume. Outcome volume decreased versus the comparison target (fewer conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t13_mixed_lang_devices.csv
+{
+  "executive_summary": "Top insights: Acquisition cost efficiency worsened on January 14, 2024; Google outperformed Facebook in conversions; Google revenue outperforms Facebook significantly.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Acquisition cost efficiency worsened on January 14, 2024.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "The CPA observed on January 14, 2024, was 30.83, compared to a baseline of 10.0. This represents a negative direction in acquisition cost efficiency."
+    },
+    {
+      "issue_opportunity": "Google outperformed Facebook in conversions.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Google showed a positive direction in conversions with an observed value of 28.14 compared to Facebook's baseline of 7.57. The increase in conversions indicates stronger performance."
+    },
+    {
+      "issue_opportunity": "Google revenue outperforms Facebook significantly.",
+      "why_it_matters": "Business output increased versus the comparison target (higher revenue).",
+      "expected_impact": "Google's revenue observed value is 844.29, while Facebook's baseline value is 326.79. This shows a positive direction in revenue performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-13 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern.",
+    "Review platform-level budget allocation and delivery for conversions differences.",
+    "Review platform-level budget allocation and delivery for revenue differences.",
+    "Review what changed around 2024-01-13 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Acquisition cost efficiency worsened on January 14, 2024.",
+      "summary": "The CPA observed on January 14, 2024, was 30.83, compared to a baseline of 10.0. This represents a negative direction in acquisition cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google outperformed Facebook in conversions.",
+      "summary": "Google showed a positive direction in conversions with an observed value of 28.14 compared to Facebook's baseline of 7.57. The increase in conversions indicates stronger performance. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for conversions differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google revenue outperforms Facebook significantly.",
+      "summary": "Google's revenue observed value is 844.29, while Facebook's baseline value is 326.79. This shows a positive direction in revenue performance. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for revenue differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Conversions decreased significantly from January 13 to January 14.",
+      "summary": "Conversions observed on January 14 were 6.0, down from 31.0 on January 13. This represents a negative direction in outcome volume. Outcome volume decreased versus the comparison target (fewer conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t14_mixed_lang_schema.csv
+
+================================================================================
+NO INSIGHTS FOUND
+================================================================================
+
+The deterministic engine did not find any statistically significant patterns. This may occur if the dataset is too small, has insufficient variation, all segments perform similarly, or required metrics (spend, revenue) are missing.
+
+This may occur if:
+  • The dataset is too small or has insufficient variation
+  • All segments perform similarly
+  • Required metrics (spend, revenue) are missing or invalid
+
+Please check your data and try again.
+================================================================================
+---------------------
+Running ./test_data/t15_mixed_lang_time_series.csv
+{
+  "executive_summary": "Top insights: Acquisition cost efficiency worsened in early January 2024; Google outperformed Facebook in conversions; Conversions decreased significantly in early January.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Acquisition cost efficiency worsened in early January 2024.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "The CPA observed from January 8 to January 14 is 30.26, compared to a baseline of 15.25 from January 1 to January 7. This represents a negative direction in cost efficiency."
+    },
+    {
+      "issue_opportunity": "Google outperformed Facebook in conversions.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Google showed higher conversions at 16.14 compared to Facebook's baseline of 5.29. This represents a positive direction in performance."
+    },
+    {
+      "issue_opportunity": "Conversions decreased significantly in early January.",
+      "why_it_matters": "Outcome volume decreased versus the comparison target (fewer conversions).",
+      "expected_impact": "From January 8 to January 14, conversions were 6.14, down from 15.29 during January 1 to January 7. This represents a negative trend in conversion performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-01 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern.",
+    "Review platform-level budget allocation and delivery for conversions differences.",
+    "Review what changed around 2024-01-01 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-05 for revenue (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Acquisition cost efficiency worsened in early January 2024.",
+      "summary": "The CPA observed from January 8 to January 14 is 30.26, compared to a baseline of 15.25 from January 1 to January 7. This represents a negative direction in cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google outperformed Facebook in conversions.",
+      "summary": "Google showed higher conversions at 16.14 compared to Facebook's baseline of 5.29. This represents a positive direction in performance. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for conversions differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Conversions decreased significantly in early January.",
+      "summary": "From January 8 to January 14, conversions were 6.14, down from 15.29 during January 1 to January 7. This represents a negative trend in conversion performance. Outcome volume decreased versus the comparison target (fewer conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue increased significantly on January 5, 2024.",
+      "summary": "Revenue observed was 750.0, which is a positive change from the baseline value of 335.77. This pattern is associated with stronger efficiency. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-05 for revenue (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t16_noisy_labels_case_mix.csv
+{
+  "executive_summary": "Top insights: Acquisition cost efficiency worsened in early January 2024; Conversions decreased significantly in early January 2024; Mobile conversions significantly increased compared to desktop.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Acquisition cost efficiency worsened in early January 2024.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "From January 8 to January 14, the CPA was 30.26, which is higher than the baseline CPA of 15.25 from January 1 to January 7. This represents a negative direction in cost efficiency."
+    },
+    {
+      "issue_opportunity": "Conversions decreased significantly in early January 2024.",
+      "why_it_matters": "Outcome volume decreased versus the comparison target (fewer conversions).",
+      "expected_impact": "From January 8 to January 14, conversions observed were 6.14, down from 15.29 in the previous week. This represents a negative trend in conversion performance."
+    },
+    {
+      "issue_opportunity": "Mobile conversions significantly increased compared to desktop.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Mobile conversions observed at 16.0, up from a baseline of 4.5. This shows a positive direction in performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-01 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-01 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern.",
+    "Review device targeting and budget split for conversions differences.",
+    "Compare budget and settings between Campaign A and Campaign B for conversions drivers."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Acquisition cost efficiency worsened in early January 2024.",
+      "summary": "From January 8 to January 14, the CPA was 30.26, which is higher than the baseline CPA of 15.25 from January 1 to January 7. This represents a negative direction in cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Conversions decreased significantly in early January 2024.",
+      "summary": "From January 8 to January 14, conversions observed were 6.14, down from 15.29 in the previous week. This represents a negative trend in conversion performance. Outcome volume decreased versus the comparison target (fewer conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Mobile conversions significantly increased compared to desktop.",
+      "summary": "Mobile conversions observed at 16.0, up from a baseline of 4.5. This shows a positive direction in performance. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review device targeting and budget split for conversions differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Campaign A shows increased conversions compared to Campaign B.",
+      "summary": "Campaign A recorded 16.17 conversions, surpassing the baseline of 5.5. This represents a positive direction in performance. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Compare budget and settings between Campaign A and Campaign B for conversions drivers."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t17_noisy_schema_typos.csv
+{
+  "executive_summary": "Top insights: Conversions decreased in early January 2024; Revenue decreased in early January 2024; Impressions increased significantly on January 5, 2024.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Conversions decreased in early January 2024.",
+      "why_it_matters": "Outcome volume decreased versus the comparison target (fewer conversions).",
+      "expected_impact": "From January 8 to January 14, conversions observed were 6.14, down from 15.29 during January 1 to January 7. This represents a negative direction in performance."
+    },
+    {
+      "issue_opportunity": "Revenue decreased in early January 2024.",
+      "why_it_matters": "Business output decreased versus the comparison target (lower revenue).",
+      "expected_impact": "From January 8 to January 14, revenue observed was 246.43, a decrease from the baseline of 484.29 during January 1 to January 7. This represents a negative direction in revenue performance."
+    },
+    {
+      "issue_opportunity": "Impressions increased significantly on January 5, 2024.",
+      "why_it_matters": "This segment outperforms the comparison target.",
+      "expected_impact": "The segment on January 5, 2024, showed 20,000 impressions, compared to a baseline of 10,576.92. This represents a positive direction in performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-01 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-01 to 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-05 for impressions (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Conversions decreased in early January 2024.",
+      "summary": "From January 8 to January 14, conversions observed were 6.14, down from 15.29 during January 1 to January 7. This represents a negative direction in performance. Outcome volume decreased versus the comparison target (fewer conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue decreased in early January 2024.",
+      "summary": "From January 8 to January 14, revenue observed was 246.43, a decrease from the baseline of 484.29 during January 1 to January 7. This represents a negative direction in revenue performance. Business output decreased versus the comparison target (lower revenue).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Impressions increased significantly on January 5, 2024.",
+      "summary": "The segment on January 5, 2024, showed 20,000 impressions, compared to a baseline of 10,576.92. This represents a positive direction in performance. This segment outperforms the comparison target.",
+      "recommended_actions": [
+        "Review what changed around 2024-01-05 for impressions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t18_noisy_gibberish_headers.csv
+
+================================================================================
+NO INSIGHTS FOUND
+================================================================================
+
+The deterministic engine did not find any statistically significant patterns. This may occur if the dataset is too small, has insufficient variation, all segments perform similarly, or required metrics (spend, revenue) are missing.
+
+This may occur if:
+  • The dataset is too small or has insufficient variation
+  • All segments perform similarly
+  • Required metrics (spend, revenue) are missing or invalid
+
+Please check your data and try again.
+================================================================================
+---------------------
+Running ./test_data/t19_noisy_sparse_values.csv
+{
+  "executive_summary": "Top insights: Acquisition cost efficiency worsened in early January; Campaign B shows significant increase in conversions; Google outperformed Facebook in conversions.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Acquisition cost efficiency worsened in early January.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "From January 8 to January 14, the CPA was 30.26, compared to a baseline of 14.0 from January 1 to January 7. This represents a negative direction in cost efficiency."
+    },
+    {
+      "issue_opportunity": "Campaign B shows significant increase in conversions.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Campaign B reported 17.33 conversions, up from a baseline of 3.0. This represents a positive direction in performance compared to Campaign C."
+    },
+    {
+      "issue_opportunity": "Google outperformed Facebook in conversions.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Google showed higher conversions at 16.14 compared to Facebook's baseline of 4.5. The direction of this change is positive."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-01 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern.",
+    "Compare budget and settings between Campaign B and Campaign C for conversions drivers.",
+    "Review platform-level budget allocation and delivery for conversions differences.",
+    "Review what changed around 2024-01-01 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Acquisition cost efficiency worsened in early January.",
+      "summary": "From January 8 to January 14, the CPA was 30.26, compared to a baseline of 14.0 from January 1 to January 7. This represents a negative direction in cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Campaign B shows significant increase in conversions.",
+      "summary": "Campaign B reported 17.33 conversions, up from a baseline of 3.0. This represents a positive direction in performance compared to Campaign C. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Compare budget and settings between Campaign B and Campaign C for conversions drivers."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google outperformed Facebook in conversions.",
+      "summary": "Google showed higher conversions at 16.14 compared to Facebook's baseline of 4.5. The direction of this change is positive. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for conversions differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Conversions decreased significantly in early January 2024.",
+      "summary": "From January 8 to January 14, conversions observed were 6.14, down from 16.17 during January 1 to January 7. This represents a negative direction in performance. Outcome volume decreased versus the comparison target (fewer conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t20_noisy_high_cardinality.csv
+{
+  "executive_summary": "Top insights: Acquisition cost efficiency worsened in early January 2024; Google outperformed Facebook in conversions; Conversions decreased significantly in early January 2024.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Acquisition cost efficiency worsened in early January 2024.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "From January 8 to January 14, the CPA was 30.26, which is higher than the baseline value of 15.25 observed from January 1 to January 7. This represents a negative direction in cost efficiency."
+    },
+    {
+      "issue_opportunity": "Google outperformed Facebook in conversions.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Google showed higher conversions with an observed value of 16.14 compared to Facebook's baseline of 5.29. This represents a positive direction in performance."
+    },
+    {
+      "issue_opportunity": "Conversions decreased significantly in early January 2024.",
+      "why_it_matters": "Outcome volume decreased versus the comparison target (fewer conversions).",
+      "expected_impact": "From January 8 to January 14, conversions were 6.14, down from 15.29 during January 1 to January 7. This represents a negative trend in conversion performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-01 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern.",
+    "Review platform-level budget allocation and delivery for conversions differences.",
+    "Review what changed around 2024-01-01 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-05 for revenue (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Acquisition cost efficiency worsened in early January 2024.",
+      "summary": "From January 8 to January 14, the CPA was 30.26, which is higher than the baseline value of 15.25 observed from January 1 to January 7. This represents a negative direction in cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google outperformed Facebook in conversions.",
+      "summary": "Google showed higher conversions with an observed value of 16.14 compared to Facebook's baseline of 5.29. This represents a positive direction in performance. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for conversions differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Conversions decreased significantly in early January 2024.",
+      "summary": "From January 8 to January 14, conversions were 6.14, down from 15.29 during January 1 to January 7. This represents a negative trend in conversion performance. Outcome volume decreased versus the comparison target (fewer conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue increased significantly on January 5, 2024.",
+      "summary": "Revenue observed on January 5, 2024, was 750.0, compared to a baseline of 335.77. This represents a positive direction in performance. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-05 for revenue (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t21_pattern_budget_misallocation.csv
+{
+  "executive_summary": "Top insights: Google revenue significantly outperformed Facebook; Google outperformed Facebook in conversions; Conversions decreased significantly from January 13 to January 14.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Google revenue significantly outperformed Facebook.",
+      "why_it_matters": "Business output increased versus the comparison target (higher revenue).",
+      "expected_impact": "Google showed higher revenue at 1647.86 compared to Facebook's baseline of 53.57. The direction of this change is positive."
+    },
+    {
+      "issue_opportunity": "Google outperformed Facebook in conversions.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Google showed a positive direction in conversions with an observed value of 54.86 compared to Facebook's baseline of 1.43. This reflects a significant increase in outcome volume."
+    },
+    {
+      "issue_opportunity": "Conversions decreased significantly from January 13 to January 14.",
+      "why_it_matters": "Outcome volume decreased versus the comparison target (fewer conversions).",
+      "expected_impact": "Conversions dropped from 40.0 on January 13 to 1.0 on January 14. This represents a negative direction in performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review platform-level budget allocation and delivery for revenue differences.",
+    "Review platform-level budget allocation and delivery for conversions differences.",
+    "Review what changed around 2024-01-13 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-13 to 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Google revenue significantly outperformed Facebook.",
+      "summary": "Google showed higher revenue at 1647.86 compared to Facebook's baseline of 53.57. The direction of this change is positive. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for revenue differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google outperformed Facebook in conversions.",
+      "summary": "Google showed a positive direction in conversions with an observed value of 54.86 compared to Facebook's baseline of 1.43. This reflects a significant increase in outcome volume. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for conversions differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Conversions decreased significantly from January 13 to January 14.",
+      "summary": "Conversions dropped from 40.0 on January 13 to 1.0 on January 14. This represents a negative direction in performance. Outcome volume decreased versus the comparison target (fewer conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue decreased significantly from January 13 to January 14.",
+      "summary": "Revenue observed on January 14 was 48.0, down from a baseline of 1215.0 on January 13. This represents a negative direction in performance. Business output decreased versus the comparison target (lower revenue).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t22_pattern_winning_campaign.csv
+{
+  "executive_summary": "Top insights: ROAS improved significantly from January 13 to January 14, 2024; Conversion efficiency improved in early January 2024; Summer Sale shows improved conversion efficiency.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "ROAS improved significantly from January 13 to January 14, 2024.",
+      "why_it_matters": "Return on ad spend improved versus the comparison target (higher ROAS).",
+      "expected_impact": "Return on ad spend (ROAS) increased from 1.6 to 4.0. This represents a positive change in performance."
+    },
+    {
+      "issue_opportunity": "Conversion efficiency improved in early January 2024.",
+      "why_it_matters": "Conversion efficiency improved versus the comparison target (higher CVR).",
+      "expected_impact": "The conversion rate (CVR) increased from 0.0303 to 0.0643 between the comparison periods. This represents a positive direction in performance metrics."
+    },
+    {
+      "issue_opportunity": "Summer Sale shows improved conversion efficiency.",
+      "why_it_matters": "Conversion efficiency improved versus the comparison target (higher CVR).",
+      "expected_impact": "The Summer Sale segment has a conversion rate (CVR) of 0.0898, which is higher than the Winter Promo baseline of 0.0289. This represents a positive direction in conversion efficiency."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-13 to 2024-01-14 for roas (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-01 to 2024-01-14 for cvr (budget, targeting, and delivery) and validate the pattern.",
+    "Compare budget and settings between Summer Sale and Winter Promo for cvr drivers.",
+    "Compare budget and settings between Summer Sale and Winter Promo for roas drivers."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "ROAS improved significantly from January 13 to January 14, 2024.",
+      "summary": "Return on ad spend (ROAS) increased from 1.6 to 4.0. This represents a positive change in performance. Return on ad spend improved versus the comparison target (higher ROAS).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for roas (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Conversion efficiency improved in early January 2024.",
+      "summary": "The conversion rate (CVR) increased from 0.0303 to 0.0643 between the comparison periods. This represents a positive direction in performance metrics. Conversion efficiency improved versus the comparison target (higher CVR).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for cvr (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Summer Sale shows improved conversion efficiency.",
+      "summary": "The Summer Sale segment has a conversion rate (CVR) of 0.0898, which is higher than the Winter Promo baseline of 0.0289. This represents a positive direction in conversion efficiency. Conversion efficiency improved versus the comparison target (higher CVR).",
+      "recommended_actions": [
+        "Compare budget and settings between Summer Sale and Winter Promo for cvr drivers."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Summer Sale shows improved ROAS compared to Winter Promo.",
+      "summary": "The Summer Sale segment has a return on ad spend (ROAS) of 4.0, which is higher than the Winter Promo's baseline value of 1.5. This represents a positive direction in performance. Return on ad spend improved versus the comparison target (higher ROAS).",
+      "recommended_actions": [
+        "Compare budget and settings between Summer Sale and Winter Promo for roas drivers."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t23_pattern_losing_campaign.csv
+{
+  "executive_summary": "Top insights: Revenue increased significantly in early January 2024; Conversions increased significantly in early January 2024; Summer Sale outperformed Winter Promo in conversions.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Revenue increased significantly in early January 2024.",
+      "why_it_matters": "Business output increased versus the comparison target (higher revenue).",
+      "expected_impact": "Revenue observed was 424.17, compared to a baseline of 116.0. This represents a positive direction in performance."
+    },
+    {
+      "issue_opportunity": "Conversions increased significantly in early January 2024.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "During the segment from 2024-01-09 to 2024-01-14, conversions averaged 16.33, compared to a baseline of 3.5 from 2024-01-05 to 2024-01-08. This represents a positive direction in performance."
+    },
+    {
+      "issue_opportunity": "Summer Sale outperformed Winter Promo in conversions.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "The Summer Sale segment showed a positive direction in conversions with an observed value of 28.33 compared to a baseline value of 3.25 from the Winter Promo. This indicates a significant increase in conversion volume."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-01 to 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-01 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern.",
+    "Compare budget and settings between Summer Sale and Winter Promo for conversions drivers.",
+    "Compare budget and settings between Winter Promo and Summer Sale for cpa drivers."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Revenue increased significantly in early January 2024.",
+      "summary": "Revenue observed was 424.17, compared to a baseline of 116.0. This represents a positive direction in performance. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Conversions increased significantly in early January 2024.",
+      "summary": "During the segment from 2024-01-09 to 2024-01-14, conversions averaged 16.33, compared to a baseline of 3.5 from 2024-01-05 to 2024-01-08. This represents a positive direction in performance. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Summer Sale outperformed Winter Promo in conversions.",
+      "summary": "The Summer Sale segment showed a positive direction in conversions with an observed value of 28.33 compared to a baseline value of 3.25 from the Winter Promo. This indicates a significant increase in conversion volume. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Compare budget and settings between Summer Sale and Winter Promo for conversions drivers."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Winter Promo shows higher CPA compared to Summer Sale.",
+      "summary": "The Winter Promo segment has an observed CPA of 59.375, which is higher than the baseline value of 6.300223052183838. This represents a negative direction in acquisition cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Compare budget and settings between Winter Promo and Summer Sale for cpa drivers."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t24_pattern_mobile_underperform.csv
+{
+  "executive_summary": "Top insights: Conversion efficiency improved on January 14, 2024; ROAS improved significantly from January 13 to January 14; Desktop shows improved conversion efficiency over Mobile.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Conversion efficiency improved on January 14, 2024.",
+      "why_it_matters": "Conversion efficiency improved versus the comparison target (higher CVR).",
+      "expected_impact": "The conversion rate (CVR) observed on January 14, 2024, was 0.058, up from 0.024 on January 13, 2024. This represents a positive change in performance."
+    },
+    {
+      "issue_opportunity": "ROAS improved significantly from January 13 to January 14.",
+      "why_it_matters": "Return on ad spend improved versus the comparison target (higher ROAS).",
+      "expected_impact": "Return on ad spend (ROAS) increased from 1.5 to 3.0. This represents a positive direction in performance."
+    },
+    {
+      "issue_opportunity": "Desktop shows improved conversion efficiency over Mobile.",
+      "why_it_matters": "Conversion efficiency improved versus the comparison target (higher CVR).",
+      "expected_impact": "Desktop has a conversion rate (CVR) of 0.055, compared to Mobile's 0.025. This represents a positive direction in performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-13 to 2024-01-14 for cvr (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-13 to 2024-01-14 for roas (budget, targeting, and delivery) and validate the pattern.",
+    "Review device targeting and budget split for cvr differences.",
+    "Review what changed around 2024-01-10 for revenue (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Conversion efficiency improved on January 14, 2024.",
+      "summary": "The conversion rate (CVR) observed on January 14, 2024, was 0.058, up from 0.024 on January 13, 2024. This represents a positive change in performance. Conversion efficiency improved versus the comparison target (higher CVR).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for cvr (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "ROAS improved significantly from January 13 to January 14.",
+      "summary": "Return on ad spend (ROAS) increased from 1.5 to 3.0. This represents a positive direction in performance. Return on ad spend improved versus the comparison target (higher ROAS).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for roas (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Desktop shows improved conversion efficiency over Mobile.",
+      "summary": "Desktop has a conversion rate (CVR) of 0.055, compared to Mobile's 0.025. This represents a positive direction in performance. Conversion efficiency improved versus the comparison target (higher CVR).",
+      "recommended_actions": [
+        "Review device targeting and budget split for cvr differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue increased significantly on January 10, 2024.",
+      "summary": "On January 10, 2024, revenue reached 810.0, outperforming the baseline of 489.23. This represents a positive direction in performance. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-10 for revenue (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t25_pattern_desktop_outperform.csv
+{
+  "executive_summary": "Top insights: Conversion efficiency improved on January 14, 2024; ROAS improved significantly from January 13 to January 14, 2024; Desktop shows improved conversion efficiency over Mobile.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Conversion efficiency improved on January 14, 2024.",
+      "why_it_matters": "Conversion efficiency improved versus the comparison target (higher CVR).",
+      "expected_impact": "The conversion rate (CVR) increased to 0.0774 on January 14, 2024, compared to 0.0323 on January 13, 2024. This represents a positive direction in performance."
+    },
+    {
+      "issue_opportunity": "ROAS improved significantly from January 13 to January 14, 2024.",
+      "why_it_matters": "Return on ad spend improved versus the comparison target (higher ROAS).",
+      "expected_impact": "Return on ad spend (ROAS) increased from 2.0 to 4.0, showing a positive direction. Spend, revenue, and clicks were also part of the observed metrics."
+    },
+    {
+      "issue_opportunity": "Desktop shows improved conversion efficiency over Mobile.",
+      "why_it_matters": "Conversion efficiency improved versus the comparison target (higher CVR).",
+      "expected_impact": "Desktop has a conversion rate (CVR) of 0.079, compared to Mobile's 0.033. This represents a positive direction in performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-13 to 2024-01-14 for cvr (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-13 to 2024-01-14 for roas (budget, targeting, and delivery) and validate the pattern.",
+    "Review device targeting and budget split for cvr differences.",
+    "Review what changed around 2024-01-10 for conversions (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Conversion efficiency improved on January 14, 2024.",
+      "summary": "The conversion rate (CVR) increased to 0.0774 on January 14, 2024, compared to 0.0323 on January 13, 2024. This represents a positive direction in performance. Conversion efficiency improved versus the comparison target (higher CVR).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for cvr (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "ROAS improved significantly from January 13 to January 14, 2024.",
+      "summary": "Return on ad spend (ROAS) increased from 2.0 to 4.0, showing a positive direction. Spend, revenue, and clicks were also part of the observed metrics. Return on ad spend improved versus the comparison target (higher ROAS).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for roas (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Desktop shows improved conversion efficiency over Mobile.",
+      "summary": "Desktop has a conversion rate (CVR) of 0.079, compared to Mobile's 0.033. This represents a positive direction in performance. Conversion efficiency improved versus the comparison target (higher CVR).",
+      "recommended_actions": [
+        "Review device targeting and budget split for cvr differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Conversions increased significantly on January 10, 2024.",
+      "summary": "Conversions observed on January 10, 2024, reached 43.0, compared to a baseline of 22.38. This represents a positive direction in performance. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-10 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t26_temporal_weekend_drop.csv
+{
+  "executive_summary": "Top insights: Weekend CPA increased compared to weekdays; Revenue decreased during the weekend compared to weekdays; Revenue increased significantly in early January 2024.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Weekend CPA increased compared to weekdays.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "The CPA for the weekend segment is 22.8125, which is higher than the baseline value of 10.0. This represents a negative direction in acquisition cost efficiency."
+    },
+    {
+      "issue_opportunity": "Revenue decreased during the weekend compared to weekdays.",
+      "why_it_matters": "Business output decreased versus the comparison target (lower revenue).",
+      "expected_impact": "Revenue for the weekend segment was 168.75, which is lower than the baseline value of 735.0 for weekdays. This shows a negative direction in revenue performance."
+    },
+    {
+      "issue_opportunity": "Revenue increased significantly in early January 2024.",
+      "why_it_matters": "Business output increased versus the comparison target (higher revenue).",
+      "expected_impact": "From January 9 to January 14, revenue reached 605.0, up from a baseline of 453.75 observed from January 5 to January 8. This reflects a positive direction in revenue performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review time-based performance patterns and scheduling.",
+    "Review what changed around 2024-01-01 to 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Weekend CPA increased compared to weekdays.",
+      "summary": "The CPA for the weekend segment is 22.8125, which is higher than the baseline value of 10.0. This represents a negative direction in acquisition cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review time-based performance patterns and scheduling."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue decreased during the weekend compared to weekdays.",
+      "summary": "Revenue for the weekend segment was 168.75, which is lower than the baseline value of 735.0 for weekdays. This shows a negative direction in revenue performance. Business output decreased versus the comparison target (lower revenue).",
+      "recommended_actions": [
+        "Review time-based performance patterns and scheduling."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue increased significantly in early January 2024.",
+      "summary": "From January 9 to January 14, revenue reached 605.0, up from a baseline of 453.75 observed from January 5 to January 8. This reflects a positive direction in revenue performance. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t27_temporal_gradual_decline.csv
+{
+  "executive_summary": "Top insights: Acquisition cost efficiency worsened in early January 2024; Acquisition cost efficiency worsened on January 14, 2024; Revenue decreased significantly in early January 2024.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Acquisition cost efficiency worsened in early January 2024.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "From January 8 to January 14, the CPA observed was 18.99, compared to a baseline of 7.88 from January 1 to January 7. This represents a negative direction in cost efficiency."
+    },
+    {
+      "issue_opportunity": "Acquisition cost efficiency worsened on January 14, 2024.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "The observed CPA is 33.33, which is higher than the baseline value of 11.90. This represents a negative direction in acquisition cost efficiency."
+    },
+    {
+      "issue_opportunity": "Revenue decreased significantly in early January 2024.",
+      "why_it_matters": "Business output decreased versus the comparison target (lower revenue).",
+      "expected_impact": "Revenue observed was 300.0, down from a baseline of 650.0. This represents a negative direction in performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-01 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-01 to 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Acquisition cost efficiency worsened in early January 2024.",
+      "summary": "From January 8 to January 14, the CPA observed was 18.99, compared to a baseline of 7.88 from January 1 to January 7. This represents a negative direction in cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Acquisition cost efficiency worsened on January 14, 2024.",
+      "summary": "The observed CPA is 33.33, which is higher than the baseline value of 11.90. This represents a negative direction in acquisition cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue decreased significantly in early January 2024.",
+      "summary": "Revenue observed was 300.0, down from a baseline of 650.0. This represents a negative direction in performance. Business output decreased versus the comparison target (lower revenue).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t28_temporal_recovery_pattern.csv
+{
+  "executive_summary": "Top insights: Acquisition cost efficiency worsened on January 5, 2024; Revenue increased significantly on January 14, 2024.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Acquisition cost efficiency worsened on January 5, 2024.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "The observed CPA is 25.0, which is higher than the baseline value of 13.38. This represents a negative direction in cost efficiency."
+    },
+    {
+      "issue_opportunity": "Revenue increased significantly on January 14, 2024.",
+      "why_it_matters": "Business output increased versus the comparison target (higher revenue).",
+      "expected_impact": "Revenue observed on January 14, 2024, was 700.0, compared to a baseline of 392.31. This represents a positive direction in performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-05 for cpa (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Acquisition cost efficiency worsened on January 5, 2024.",
+      "summary": "The observed CPA is 25.0, which is higher than the baseline value of 13.38. This represents a negative direction in cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-05 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue increased significantly on January 14, 2024.",
+      "summary": "Revenue observed on January 14, 2024, was 700.0, compared to a baseline of 392.31. This represents a positive direction in performance. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t29_edge_small_dataset.csv
+
+================================================================================
+NO INSIGHTS FOUND
+================================================================================
+
+No strong insights detected in this dataset.
+
+This may occur if:
+  • The dataset is too small or has insufficient variation
+  • All segments perform similarly
+  • Required metrics (spend, revenue) are missing or invalid
+
+Please check your data and try again.
+================================================================================
+---------------------
+Running ./test_data/t30_edge_no_strong_signal.csv
+
+================================================================================
+NO INSIGHTS FOUND
+================================================================================
+
+The deterministic engine did not find any statistically significant patterns. This may occur if the dataset is too small, has insufficient variation, all segments perform similarly, or required metrics (spend, revenue) are missing.
+
+This may occur if:
+  • The dataset is too small or has insufficient variation
+  • All segments perform similarly
+  • Required metrics (spend, revenue) are missing or invalid
+
+Please check your data and try again.
+================================================================================
+---------------------
+Running ./test_data/t31_big_dataset_google_meta.csv
+{
+  "executive_summary": "Top insights: Black Friday Revenue outperformed Winter Promo; Black Friday Conversions outperformed Summer Sale; Google outperformed Facebook in conversions.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Black Friday Revenue outperformed Winter Promo",
+      "why_it_matters": "Revenue differences between Black Friday and Winter Promo are budget-relevant—higher output typically deserves priority.",
+      "expected_impact": "Black Friday shows stronger Revenue than Winter Promo, with 925.31 vs 353.75 (162% difference)."
+    },
+    {
+      "issue_opportunity": "Black Friday Conversions outperformed Summer Sale",
+      "why_it_matters": "Conversion volume differences between Black Friday and Summer Sale help prioritize spend where outcomes are stronger.",
+      "expected_impact": "Black Friday shows stronger Conversions than Summer Sale, with 36.22 vs 13.45 (169% difference)."
+    },
+    {
+      "issue_opportunity": "Google outperformed Facebook in conversions.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Google showed higher conversions at 30.18 compared to Facebook's 11.99. The performance direction is positive."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Compare budget and settings between Black Friday and Winter Promo for revenue drivers.",
+    "Compare budget and settings between Black Friday and Summer Sale for conversions drivers.",
+    "Review platform-level budget allocation and delivery for conversions differences.",
+    "Review what changed around 2024-02-04 to 2024-02-05 for conversions (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Black Friday Revenue outperformed Winter Promo",
+      "summary": "Black Friday shows stronger Revenue than Winter Promo, with 925.31 vs 353.75 (162% difference). Revenue differences between Black Friday and Winter Promo are budget-relevant—higher output typically deserves priority.",
+      "recommended_actions": [
+        "Compare budget and settings between Black Friday and Winter Promo for revenue drivers."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Black Friday Conversions outperformed Summer Sale",
+      "summary": "Black Friday shows stronger Conversions than Summer Sale, with 36.22 vs 13.45 (169% difference). Conversion volume differences between Black Friday and Summer Sale help prioritize spend where outcomes are stronger.",
+      "recommended_actions": [
+        "Compare budget and settings between Black Friday and Summer Sale for conversions drivers."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google outperformed Facebook in conversions.",
+      "summary": "Google showed higher conversions at 30.18 compared to Facebook's 11.99. The performance direction is positive. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for conversions differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Conversions decreased from February 4 to February 5.",
+      "summary": "Conversions showed a negative direction, decreasing from a baseline value of 27.5 to an observed value of 12.5. Spend, revenue, and clicks were also part of the metrics monitored. Outcome volume decreased versus the comparison target (fewer conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-02-04 to 2024-02-05 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t32_big_dataset_campaigns.csv
+{
+  "executive_summary": "Top insights: Campaign Alpha outperformed Campaign Beta in revenue; Google revenue surpasses Facebook performance; Google outperformed Facebook in conversions.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Campaign Alpha outperformed Campaign Beta in revenue.",
+      "why_it_matters": "Business output increased versus the comparison target (higher revenue).",
+      "expected_impact": "Campaign Alpha showed higher revenue at 603.23 compared to Campaign Beta's 307.42. This represents a positive direction in performance."
+    },
+    {
+      "issue_opportunity": "Google revenue surpasses Facebook performance.",
+      "why_it_matters": "Business output increased versus the comparison target (higher revenue).",
+      "expected_impact": "Google showed higher revenue at 492.86 compared to Facebook's 279.33. The direction is positive."
+    },
+    {
+      "issue_opportunity": "Google outperformed Facebook in conversions.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Google showed higher conversions at 19.91 compared to Facebook's baseline of 11.66. The performance direction is positive."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Compare budget and settings between Campaign Alpha and Campaign Beta for revenue drivers.",
+    "Review platform-level budget allocation and delivery for revenue differences.",
+    "Review platform-level budget allocation and delivery for conversions differences.",
+    "Review what changed around 2024-01-30 to 2024-01-31 for revenue (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Campaign Alpha outperformed Campaign Beta in revenue.",
+      "summary": "Campaign Alpha showed higher revenue at 603.23 compared to Campaign Beta's 307.42. This represents a positive direction in performance. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Compare budget and settings between Campaign Alpha and Campaign Beta for revenue drivers."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google revenue surpasses Facebook performance.",
+      "summary": "Google showed higher revenue at 492.86 compared to Facebook's 279.33. The direction is positive. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for revenue differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google outperformed Facebook in conversions.",
+      "summary": "Google showed higher conversions at 19.91 compared to Facebook's baseline of 11.66. The performance direction is positive. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for conversions differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue decreased from January 30 to January 31, 2024.",
+      "summary": "Revenue observed on January 31, 2024, was 370.0, down from a baseline of 551.43 on January 30, 2024. This represents a negative direction in revenue performance. Business output decreased versus the comparison target (lower revenue).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-30 to 2024-01-31 for revenue (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t33_missing_revenue.csv
+{
+  "executive_summary": "Top insights: Acquisition cost efficiency worsened on January 14, 2024; Google outperformed Facebook in conversions; Facebook CPA worsens compared to Google.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Acquisition cost efficiency worsened on January 14, 2024.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "On January 14, 2024, the CPA was 34.0, compared to a baseline of 10.0. This represents a negative direction in cost efficiency."
+    },
+    {
+      "issue_opportunity": "Google outperformed Facebook in conversions.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Google showed a positive increase in conversions with an observed value of 23.29 compared to Facebook's baseline value of 7.0. This performance reflects a significant difference in outcome volume."
+    },
+    {
+      "issue_opportunity": "Facebook CPA worsens compared to Google.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "Facebook's CPA is 26.22, which is higher than the baseline value of 10.0. This represents a negative direction in acquisition cost efficiency."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-13 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern.",
+    "Review platform-level budget allocation and delivery for conversions differences.",
+    "Review platform-level budget allocation and delivery for cpa differences.",
+    "Review what changed around 2024-01-13 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Acquisition cost efficiency worsened on January 14, 2024.",
+      "summary": "On January 14, 2024, the CPA was 34.0, compared to a baseline of 10.0. This represents a negative direction in cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google outperformed Facebook in conversions.",
+      "summary": "Google showed a positive increase in conversions with an observed value of 23.29 compared to Facebook's baseline value of 7.0. This performance reflects a significant difference in outcome volume. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for conversions differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Facebook CPA worsens compared to Google.",
+      "summary": "Facebook's CPA is 26.22, which is higher than the baseline value of 10.0. This represents a negative direction in acquisition cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for cpa differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Conversions decreased from January 13 to January 14.",
+      "summary": "Conversions observed on January 14 were 5.0, down from 21.0 on January 13. This represents a negative direction in outcome volume. Outcome volume decreased versus the comparison target (fewer conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t34_missing_impressions.csv
+{
+  "executive_summary": "Top insights: Acquisition cost efficiency worsened on January 14, 2024; Google outperformed Facebook in conversions; Google revenue outperforms Facebook significantly.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Acquisition cost efficiency worsened on January 14, 2024.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "On January 14, 2024, the CPA was observed at 34.0, compared to a baseline of 10.0. This represents a negative direction in acquisition cost efficiency."
+    },
+    {
+      "issue_opportunity": "Google outperformed Facebook in conversions.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Google showed higher conversions at 23.29 compared to Facebook's baseline of 7.0. This represents a positive direction in performance."
+    },
+    {
+      "issue_opportunity": "Google revenue outperforms Facebook significantly.",
+      "why_it_matters": "Business output increased versus the comparison target (higher revenue).",
+      "expected_impact": "Google reported a revenue of 698.57, which is a positive increase from the baseline value of 291.43. This performance surpasses Facebook's revenue metrics."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-13 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern.",
+    "Review platform-level budget allocation and delivery for conversions differences.",
+    "Review platform-level budget allocation and delivery for revenue differences.",
+    "Review what changed around 2024-01-13 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Acquisition cost efficiency worsened on January 14, 2024.",
+      "summary": "On January 14, 2024, the CPA was observed at 34.0, compared to a baseline of 10.0. This represents a negative direction in acquisition cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google outperformed Facebook in conversions.",
+      "summary": "Google showed higher conversions at 23.29 compared to Facebook's baseline of 7.0. This represents a positive direction in performance. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for conversions differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google revenue outperforms Facebook significantly.",
+      "summary": "Google reported a revenue of 698.57, which is a positive increase from the baseline value of 291.43. This performance surpasses Facebook's revenue metrics. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for revenue differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Conversions decreased significantly from January 13 to January 14.",
+      "summary": "Conversions observed on January 14 were 5.0, down from 21.0 on January 13. This represents a negative direction in outcome volume. Outcome volume decreased versus the comparison target (fewer conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t35_extra_dimensions.csv
+{
+  "executive_summary": "Top insights: Acquisition cost efficiency worsened on January 14, 2024; Google outperformed Facebook in conversions; Google revenue outperforms Facebook significantly.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Acquisition cost efficiency worsened on January 14, 2024.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "On January 14, 2024, the CPA was 34.0, compared to a baseline of 10.0 from January 13, 2024. This represents a negative direction in cost efficiency."
+    },
+    {
+      "issue_opportunity": "Google outperformed Facebook in conversions.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Google showed a positive direction in conversions with an observed value of 23.29 compared to Facebook's baseline value of 7.0. This indicates a significant increase in outcome volume."
+    },
+    {
+      "issue_opportunity": "Google revenue outperforms Facebook significantly.",
+      "why_it_matters": "Business output increased versus the comparison target (higher revenue).",
+      "expected_impact": "Google showed higher revenue at 698.57 compared to Facebook's baseline of 291.43. This represents a positive direction in performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-13 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern.",
+    "Review platform-level budget allocation and delivery for conversions differences.",
+    "Review platform-level budget allocation and delivery for revenue differences.",
+    "Review what changed around 2024-01-13 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Acquisition cost efficiency worsened on January 14, 2024.",
+      "summary": "On January 14, 2024, the CPA was 34.0, compared to a baseline of 10.0 from January 13, 2024. This represents a negative direction in cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google outperformed Facebook in conversions.",
+      "summary": "Google showed a positive direction in conversions with an observed value of 23.29 compared to Facebook's baseline value of 7.0. This indicates a significant increase in outcome volume. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for conversions differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google revenue outperforms Facebook significantly.",
+      "summary": "Google showed higher revenue at 698.57 compared to Facebook's baseline of 291.43. This represents a positive direction in performance. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for revenue differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Conversions decreased significantly on January 14, 2024.",
+      "summary": "Conversions observed on January 14, 2024, were 5.0, compared to 21.0 on January 13, 2024. This represents a negative trend in outcome volume. Outcome volume decreased versus the comparison target (fewer conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t36_schema_variation.csv
+{
+  "executive_summary": "Top insights: Conversions decreased from January 13 to January 14; Google outperformed Facebook in conversions; Facebook conversions decreased compared to baseline.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Conversions decreased from January 13 to January 14.",
+      "why_it_matters": "Outcome volume decreased versus the comparison target (fewer conversions).",
+      "expected_impact": "Conversions observed on January 14 were 5.0, down from 21.0 on January 13. This represents a negative direction in performance."
+    },
+    {
+      "issue_opportunity": "Google outperformed Facebook in conversions.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Google showed 23.29 conversions compared to Facebook's baseline of 7.0. This represents a positive direction in performance."
+    },
+    {
+      "issue_opportunity": "Facebook conversions decreased compared to baseline.",
+      "why_it_matters": "Outcome volume decreased versus the comparison target (fewer conversions).",
+      "expected_impact": "Facebook showed lower conversions with an observed value of 7.0 versus a baseline of 15.14. This represents a negative direction in performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-13 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern.",
+    "Review platform-level budget allocation and delivery for conversions differences."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Conversions decreased from January 13 to January 14.",
+      "summary": "Conversions observed on January 14 were 5.0, down from 21.0 on January 13. This represents a negative direction in performance. Outcome volume decreased versus the comparison target (fewer conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google outperformed Facebook in conversions.",
+      "summary": "Google showed 23.29 conversions compared to Facebook's baseline of 7.0. This represents a positive direction in performance. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for conversions differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Facebook conversions decreased compared to baseline.",
+      "summary": "Facebook showed lower conversions with an observed value of 7.0 versus a baseline of 15.14. This represents a negative direction in performance. Outcome volume decreased versus the comparison target (fewer conversions).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for conversions differences."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t37_messy_case_schema.csv
+{
+  "executive_summary": "Top insights: Revenue increased significantly on January 9, 2024; Google revenue outperforms Facebook significantly; Revenue decreased from January 13 to January 14, 2024.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Revenue increased significantly on January 9, 2024.",
+      "why_it_matters": "Business output increased versus the comparison target (higher revenue).",
+      "expected_impact": "On January 9, 2024, revenue reached 900.0, outperforming the baseline of 463.85. This represents a positive direction in performance."
+    },
+    {
+      "issue_opportunity": "Google revenue outperforms Facebook significantly.",
+      "why_it_matters": "Business output increased versus the comparison target (higher revenue).",
+      "expected_impact": "Google showed higher revenue at 698.57 compared to Facebook's baseline of 291.43. The direction of this change is positive."
+    },
+    {
+      "issue_opportunity": "Revenue decreased from January 13 to January 14, 2024.",
+      "why_it_matters": "Business output decreased versus the comparison target (lower revenue).",
+      "expected_impact": "Revenue observed on January 14, 2024, was 255.0, compared to a baseline of 630.0 on January 13, 2024. This represents a negative direction in revenue performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-09 for revenue (budget, targeting, and delivery) and validate the pattern.",
+    "Review platform-level budget allocation and delivery for revenue differences.",
+    "Review what changed around 2024-01-13 to 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Revenue increased significantly on January 9, 2024.",
+      "summary": "On January 9, 2024, revenue reached 900.0, outperforming the baseline of 463.85. This represents a positive direction in performance. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-09 for revenue (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google revenue outperforms Facebook significantly.",
+      "summary": "Google showed higher revenue at 698.57 compared to Facebook's baseline of 291.43. The direction of this change is positive. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for revenue differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue decreased from January 13 to January 14, 2024.",
+      "summary": "Revenue observed on January 14, 2024, was 255.0, compared to a baseline of 630.0 on January 13, 2024. This represents a negative direction in revenue performance. Business output decreased versus the comparison target (lower revenue).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t38_typo_schema.csv
+{
+  "executive_summary": "Top insights: Conversions decreased from January 13 to January 14; Google outperformed Facebook in conversions; Conversions on Facebook decreased compared to baseline.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Conversions decreased from January 13 to January 14.",
+      "why_it_matters": "Outcome volume decreased versus the comparison target (fewer conversions).",
+      "expected_impact": "Conversions observed on January 14 were 5.0, down from 21.0 on January 13. This represents a negative direction in performance."
+    },
+    {
+      "issue_opportunity": "Google outperformed Facebook in conversions.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Google recorded 23.29 conversions, significantly higher than Facebook's baseline of 7.0. This represents a positive direction in performance."
+    },
+    {
+      "issue_opportunity": "Conversions on Facebook decreased compared to baseline.",
+      "why_it_matters": "Outcome volume decreased versus the comparison target (fewer conversions).",
+      "expected_impact": "Facebook showed lower conversions with an observed value of 7.0 against a baseline of 15.14. This represents a negative direction in performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-13 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern.",
+    "Review platform-level budget allocation and delivery for conversions differences."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Conversions decreased from January 13 to January 14.",
+      "summary": "Conversions observed on January 14 were 5.0, down from 21.0 on January 13. This represents a negative direction in performance. Outcome volume decreased versus the comparison target (fewer conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google outperformed Facebook in conversions.",
+      "summary": "Google recorded 23.29 conversions, significantly higher than Facebook's baseline of 7.0. This represents a positive direction in performance. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for conversions differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Conversions on Facebook decreased compared to baseline.",
+      "summary": "Facebook showed lower conversions with an observed value of 7.0 against a baseline of 15.14. This represents a negative direction in performance. Outcome volume decreased versus the comparison target (fewer conversions).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for conversions differences."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t39_long_time_series.csv
+{
+  "executive_summary": "Top insights: Acquisition cost efficiency worsened on March 24, 2024; AOV spiked on 2024-03-24; Acquisition cost efficiency worsened in early 2024.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Acquisition cost efficiency worsened on March 24, 2024.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "The observed CPA is 85.0, compared to a baseline of 15.89, showing a negative direction. This indicates a significant increase in acquisition costs."
+    },
+    {
+      "issue_opportunity": "AOV spiked on 2024-03-24",
+      "why_it_matters": "This pattern helps prioritize where to focus analysis and optimization effort.",
+      "expected_impact": "2024-03-24 shows stronger AOV than baseline, with 170.00 vs 39.00 (336% difference)."
+    },
+    {
+      "issue_opportunity": "Acquisition cost efficiency worsened in early 2024.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "The CPA observed value is 19.88, which is higher than the baseline value of 13.35. This represents a negative direction in acquisition cost efficiency compared to the previous period."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-03-24 for cpa (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-03-24 for aov (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-01 to 2024-03-31 for cpa (budget, targeting, and delivery) and validate the pattern.",
+    "Review time-based performance patterns and scheduling."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Acquisition cost efficiency worsened on March 24, 2024.",
+      "summary": "The observed CPA is 85.0, compared to a baseline of 15.89, showing a negative direction. This indicates a significant increase in acquisition costs. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-03-24 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "AOV spiked on 2024-03-24",
+      "summary": "2024-03-24 shows stronger AOV than baseline, with 170.00 vs 39.00 (336% difference). This pattern helps prioritize where to focus analysis and optimization effort.",
+      "recommended_actions": [
+        "Review what changed around 2024-03-24 for aov (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Acquisition cost efficiency worsened in early 2024.",
+      "summary": "The CPA observed value is 19.88, which is higher than the baseline value of 13.35. This represents a negative direction in acquisition cost efficiency compared to the previous period. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-03-31 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue decreased during the weekend compared to weekdays.",
+      "summary": "Revenue for the weekend segment was 230.0, while the baseline for weekdays was 1560.0. This represents a negative direction in performance. Business output decreased versus the comparison target (lower revenue).",
+      "recommended_actions": [
+        "Review time-based performance patterns and scheduling."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t40_sparse_dataset.csv
+{
+  "executive_summary": "Top insights: Acquisition cost efficiency worsened on January 8, 2024; Google outperformed Facebook in conversions; Google revenue outperforms Facebook significantly.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Acquisition cost efficiency worsened on January 8, 2024.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "The observed CPA is 32.0, which is higher than the baseline value of 13.97. This represents a negative direction in cost efficiency."
+    },
+    {
+      "issue_opportunity": "Google outperformed Facebook in conversions.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Google showed higher conversions at 26.35 compared to Facebook's baseline of 10.31. This represents a positive direction in performance."
+    },
+    {
+      "issue_opportunity": "Google revenue outperforms Facebook significantly.",
+      "why_it_matters": "Business output increased versus the comparison target (higher revenue).",
+      "expected_impact": "Google generated revenue of 802.11, compared to Facebook's baseline revenue of 340.79. This represents a positive direction in revenue performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-08 for cpa (budget, targeting, and delivery) and validate the pattern.",
+    "Review platform-level budget allocation and delivery for conversions differences.",
+    "Review platform-level budget allocation and delivery for revenue differences."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Acquisition cost efficiency worsened on January 8, 2024.",
+      "summary": "The observed CPA is 32.0, which is higher than the baseline value of 13.97. This represents a negative direction in cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-08 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google outperformed Facebook in conversions.",
+      "summary": "Google showed higher conversions at 26.35 compared to Facebook's baseline of 10.31. This represents a positive direction in performance. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for conversions differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google revenue outperforms Facebook significantly.",
+      "summary": "Google generated revenue of 802.11, compared to Facebook's baseline revenue of 340.79. This represents a positive direction in revenue performance. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for revenue differences."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/temporal_01_weekend_drop.csv
+{
+  "executive_summary": "Top insights: Weekend CPA increased compared to weekdays; Revenue decreased on weekends compared to weekdays; Acquisition cost efficiency worsened in January.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Weekend CPA increased compared to weekdays.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "The CPA for the weekend segment is 73.6, which is higher than the weekday baseline of 43.68. This represents a negative direction in cost efficiency."
+    },
+    {
+      "issue_opportunity": "Revenue decreased on weekends compared to weekdays.",
+      "why_it_matters": "Business output decreased versus the comparison target (lower revenue).",
+      "expected_impact": "Revenue for the weekend segment was 582.0, which is lower than the baseline value of 1202.0 for weekdays. This represents a negative direction in performance."
+    },
+    {
+      "issue_opportunity": "Acquisition cost efficiency worsened in January.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "From January 11 to January 20, the CPA observed was 54.64, compared to a baseline of 47.68 from January 1 to January 10. This represents a negative direction in cost efficiency."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review time-based performance patterns and scheduling.",
+    "Review what changed around 2024-01-01 to 2024-01-20 for cpa (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-01 to 2024-01-20 for revenue (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Weekend CPA increased compared to weekdays.",
+      "summary": "The CPA for the weekend segment is 73.6, which is higher than the weekday baseline of 43.68. This represents a negative direction in cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review time-based performance patterns and scheduling."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue decreased on weekends compared to weekdays.",
+      "summary": "Revenue for the weekend segment was 582.0, which is lower than the baseline value of 1202.0 for weekdays. This represents a negative direction in performance. Business output decreased versus the comparison target (lower revenue).",
+      "recommended_actions": [
+        "Review time-based performance patterns and scheduling."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Acquisition cost efficiency worsened in January.",
+      "summary": "From January 11 to January 20, the CPA observed was 54.64, compared to a baseline of 47.68 from January 1 to January 10. This represents a negative direction in cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-20 for cpa (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue decreased from January 1 to January 20, 2024.",
+      "summary": "Revenue observed was 973.0, which is lower than the baseline value of 1121.0. This represents a negative direction in performance. Business output decreased versus the comparison target (lower revenue).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-20 for revenue (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------

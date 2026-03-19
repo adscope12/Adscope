@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="insights-page">
+    <div class="insights-container">
+        <!-- Header -->
+        <div class="insights-header">
+            <div>
+                <div class="brand-title">AdScope</div>
+                <div class="brand-subtitle">AI Marketing Insight Engine</div>
+                {% if result.file_name %}
+                <div class="file-name-display">{{ result.file_name }}</div>
+                {% endif %}
+            </div>
+            <a href="/" class="btn-secondary">
+                Analyze another dataset
+            </a>
+        </div>
+        
+        <!-- Executive Summary -->
+        {% if result.executive_summary %}
+        <div class="section-card">
+            <h2 class="section-title">Executive Summary</h2>
+            <p class="section-text">{{ result.executive_summary }}</p>
+        </div>
+        {% endif %}
+        
+        <!-- Top Insights -->
+        {% if result.top_priorities or result.prioritized_insights %}
+        <div class="section-card">
+            <h2 class="section-title">Top Insights</h2>
+            <div class="insights-grid">
+                {% if result.top_priorities %}
+                    {% for insight in result.top_priorities %}
+                    <div class="insight-item">
+                        <div class="insight-number">{{ loop.index }}</div>
+                        <div class="insight-content">
+                            <h3 class="insight-title">{{ insight.issue_opportunity }}</h3>
+                            {% if insight.why_it_matters %}
+                            <p class="insight-text">{{ insight.why_it_matters }}</p>
+                            {% endif %}
+                            {% if insight.expected_impact %}
+                            <div class="insight-impact">{{ insight.expected_impact }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% elif result.prioritized_insights %}
+                    {% for insight in result.prioritized_insights[:5] %}
+                    <div class="insight-item">
+                        <div class="insight-number">{{ loop.index }}</div>
+                        <div class="insight-content">
+                            <h3 class="insight-title">{{ insight.title or 'Insight' }}</h3>
+                            {% if insight.summary %}
+                            <p class="insight-text">{{ insight.summary }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+        
+        <!-- Recommended Actions -->
+        {% if result.recommended_checks or (result.prioritized_insights and result.prioritized_insights[0].recommended_actions) %}
+        <div class="section-card">
+            <h2 class="section-title">Recommended Actions</h2>
+            <div class="actions-list">
+                {% if result.recommended_checks %}
+                    {% for action in result.recommended_checks %}
+                    <div class="action-item">
+                        <svg class="action-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                        <span>{{ action }}</span>
+                    </div>
+                    {% endfor %}
+                {% elif result.prioritized_insights %}
+                    {% for insight in result.prioritized_insights %}
+                        {% if insight.recommended_actions %}
+                            {% for action in insight.recommended_actions[:8] %}
+                            <div class="action-item">
+                                <svg class="action-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                                <span>{{ action }}</span>
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+        
+        <!-- Risk Warnings -->
+        {% if result.risks_warnings and result.risks_warnings|length > 0 %}
+        <div class="section-card warning-card">
+            <h2 class="section-title">Risk Warnings</h2>
+            <div class="warnings-list">
+                {% for warning in result.risks_warnings %}
+                <div class="warning-item">
+                    <svg class="warning-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                    <span>{{ warning }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        
+        <!-- Bottom CTA -->
+        <div class="cta-section">
+            <a href="/" class="btn-primary" style="text-decoration: none;">
+                Analyze another dataset
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

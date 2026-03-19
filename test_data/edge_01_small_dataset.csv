@@ -1,0 +1,5 @@
+date,campaign,platform,device,spend,revenue,clicks,impressions,conversions
+2024-01-01,Small Test,Google,Mobile,200,500,60,2000,5
+2024-01-02,Small Test,Google,Desktop,150,400,45,1500,4
+2024-01-03,Small Test,Facebook,Mobile,180,350,90,3600,3
+2024-01-04,Small Test,Facebook,Desktop,120,300,30,1200,3

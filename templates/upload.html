@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-container">
+    <div class="content-wrapper">
+        <div class="mb-6">
+            <div class="brand-title">AdScope</div>
+            <div class="brand-subtitle">AI Marketing Insight Engine</div>
+        </div>
+        
+        <div class="card p-5">
+            <h1 class="text-lg font-semibold text-gray-900 text-center mb-2" style="letter-spacing: -0.8px;">Upload your campaign data</h1>
+            <p class="text-center text-gray-500 mb-4 text-xs">Upload one campaign performance file to generate strategic insights.</p>
+            
+            {% if error %}
+            <div class="mb-3 p-2 bg-red-50 border border-red-200 rounded-xl">
+                <p class="text-red-700 text-xs">{{ error }}</p>
+            </div>
+            {% endif %}
+            
+            <form id="upload-form" method="post" action="/analyze" enctype="multipart/form-data">
+                <input type="file" id="file-input-hidden" name="file" accept=".csv,.xlsx,.xls" class="hidden">
+                <input type="hidden" name="skip_reading" value="false">
+                <input type="hidden" name="skip_strategic" value="false">
+            </form>
+            
+            <div class="upload-card p-6 text-center" id="upload-area" 
+                 ondrop="handleDrop(event)" 
+                 ondragover="handleDragOver(event)" 
+                 ondragleave="handleDragLeave(event)"
+                 onclick="document.getElementById('file-input').click()">
+                <input type="file" id="file-input" accept=".csv,.xlsx,.xls" class="hidden" onchange="handleFileSelect(event)">
+                    
+                <svg class="w-10 h-10 text-gray-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" class="icon-thin">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                </svg>
+                
+                <p class="text-gray-700 mb-1 text-sm font-medium">
+                    <span class="text-accent">Click to upload</span>
+                    <span class="text-gray-500"> or drag and drop</span>
+                </p>
+                <p class="text-xs text-gray-400">CSV or XLSX files only</p>
+            </div>
+            
+            <div id="file-info" class="hidden mt-4 p-3 bg-gray-50 rounded-xl border border-gray-100">
+                <div class="flex items-center justify-center">
+                    <svg class="w-4 h-4 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" class="icon-thin">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <span id="file-name" class="text-gray-700 font-medium text-sm"></span>
+                    <span class="text-gray-400 ml-2 text-xs">• Processing...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function handleDragOver(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const uploadArea = document.getElementById('upload-area');
+        if (uploadArea) {
+            uploadArea.classList.add('dragover');
+        }
+    }
+
+    function handleDragLeave(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const uploadArea = document.getElementById('upload-area');
+        if (uploadArea) {
+            uploadArea.classList.remove('dragover');
+        }
+    }
+
+    function handleDrop(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.currentTarget.classList.remove('dragover');
+        const files = e.dataTransfer.files;
+        if (files.length > 0) {
+            const fileInput = document.getElementById('file-input');
+            const dataTransfer = new DataTransfer();
+            dataTransfer.items.add(files[0]);
+            fileInput.files = dataTransfer.files;
+            handleFile(files[0]);
+        }
+    }
+
+    function handleFileSelect(e) {
+        if (e.target.files && e.target.files.length > 0) {
+            handleFile(e.target.files[0]);
+        }
+    }
+
+    function handleFile(file) {
+        const validExtensions = ['csv', 'xlsx', 'xls'];
+        const extension = file.name.split('.').pop().toLowerCase();
+        
+        if (!validExtensions.includes(extension)) {
+            alert('Please upload a CSV or XLSX file');
+            return;
+        }
+        
+        // Show file info briefly
+        document.getElementById('file-name').textContent = file.name;
+        document.getElementById('file-info').classList.remove('hidden');
+        
+        // Immediately start upload
+        startUpload(file);
+    }
+
+    function clearFile(e) {
+        if (e) e.stopPropagation();
+        const fileInput = document.getElementById('file-input');
+        fileInput.value = '';
+        document.getElementById('file-info').classList.add('hidden');
+    }
+
+    function startUpload(file) {
+        // Store file in hidden form input
+        const hiddenInput = document.getElementById('file-input-hidden');
+        const dataTransfer = new DataTransfer();
+        dataTransfer.items.add(file);
+        hiddenInput.files = dataTransfer.files;
+        
+        // Show processing overlay
+        showProcessingOverlay();
+        
+        // Submit form directly - backend will process and return insights
+        const form = document.getElementById('upload-form');
+        if (form && hiddenInput.files.length > 0) {
+            form.submit();
+        }
+    }
+    
+    function showProcessingOverlay() {
+        // Hide upload area
+        document.getElementById('upload-area').style.display = 'none';
+        document.getElementById('file-info').classList.remove('hidden');
+        document.getElementById('file-name').textContent = file.name + ' • Processing...';
+        
+        // Redirect to processing page
+        window.location.href = '/processing';
+    }
+</script>
+{% endblock %}

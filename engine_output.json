@@ -1,0 +1,86 @@
+[
+  {
+    "id": "revenue_concentration_risk",
+    "category": "concentration_risk",
+    "segment_id": "Google",
+    "dimension": "platform",
+    "metric": "revenue",
+    "observed_value": 2242.0,
+    "baseline_value": 1881.5,
+    "absolute_delta": 360.5,
+    "relative_delta_pct": 19.160244485772438,
+    "importance_score": 0.5,
+    "confidence": 0.8,
+    "source_pattern_type": "CONCENTRATION_RISK",
+    "supporting_candidates": []
+  },
+  {
+    "id": "underfunded_winner",
+    "category": "budget_efficiency",
+    "segment_id": "A_vs_B",
+    "dimension": "campaign",
+    "metric": "roas",
+    "observed_value": 2.9973986013986016,
+    "baseline_value": 1.2026960170032925,
+    "absolute_delta": 1.794702584395309,
+    "relative_delta_pct": 149.22329146602326,
+    "importance_score": 0.400176477924864,
+    "confidence": 0.9249800151643496,
+    "source_pattern_type": "SEGMENT_GAP",
+    "supporting_candidates": [
+      "SEGMENT_GAP_campaign_A_B_roas"
+    ]
+  },
+  {
+    "id": "spend_revenue_imbalance",
+    "category": "budget_efficiency",
+    "segment_id": "B",
+    "dimension": "campaign",
+    "metric": "spend/revenue_ratio",
+    "observed_value": 0.8362958532695375,
+    "baseline_value": 0.5660377358490566,
+    "absolute_delta": 0.2702581174204809,
+    "relative_delta_pct": 47.745600659934404,
+    "importance_score": 0.19607821245571885,
+    "confidence": 0.5633828935587393,
+    "source_pattern_type": "METRIC_IMBALANCE",
+    "supporting_candidates": [
+      "METRIC_IMBALANCE_campaign_B_high"
+    ]
+  },
+  {
+    "id": "segment_below_baseline",
+    "category": "performance_gaps",
+    "segment_id": "Facebook",
+    "dimension": "platform",
+    "metric": "revenue",
+    "observed_value": 1280.6666666666667,
+    "baseline_value": 1881.5,
+    "absolute_delta": -600.8333333333333,
+    "relative_delta_pct": -31.933740809620726,
+    "importance_score": 0.15283027707331426,
+    "confidence": 0.4731648514605613,
+    "source_pattern_type": "SEGMENT_BELOW_BASELINE",
+    "supporting_candidates": [
+      "SEGMENT_BELOW_BASELINE_platform_Facebook_revenue"
+    ]
+  },
+  {
+    "id": "risk_flags",
+    "category": "risk_monitoring",
+    "segment_id": "Google",
+    "dimension": "platform",
+    "metric": "revenue",
+    "observed_value": 2242.0,
+    "baseline_value": 1881.5,
+    "absolute_delta": 360.5,
+    "relative_delta_pct": 19.160244485772438,
+    "importance_score": 0.5,
+    "confidence": 0.8,
+    "source_pattern_type": "RISK_FLAG",
+    "supporting_candidates": [
+      "revenue_concentration_risk",
+      "platform_dependency_risk"
+    ]
+  }
+]

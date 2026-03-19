@@ -1,0 +1,5 @@
+date,campaign,platform,device,spend,revenue,clicks,impressions,conversions
+2024-01-01,Campaign A,Google,Mobile,200.00,600.00,400,15000,20
+2024-01-02,Campaign A,Google,Desktop,180.00,540.00,350,12000,18
+2024-01-03,Campaign A,Facebook,Mobile,150.00,300.00,280,10000,8
+2024-01-04,Campaign A,Facebook,Desktop,120.00,180.00,200,8000,4

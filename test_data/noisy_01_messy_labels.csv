@@ -1,0 +1,17 @@
+date,campaign,platform,device,spend,revenue,clicks,impressions,conversions
+2024-01-01,Summer Sale,Google,Mobile,500,1200,150,5000,12
+2024-01-02,Summer Sale,Google,mobile,520,1350,160,5200,14
+2024-01-03,Summer Sale,Google,MOBILE,480,1100,145,4800,11
+2024-01-04,Summer Sale,Google,Desktop,300,950,80,3000,9
+2024-01-05,Summer Sale,Google,desktop,310,980,82,3100,10
+2024-01-06,Summer Sale,Google,DESKTOP,290,920,78,2900,9
+2024-01-07,Summer Sale,Facebook,Mobile,400,600,200,8000,6
+2024-01-08,Summer Sale,facebook,Mobile,420,650,210,8200,7
+2024-01-09,Summer Sale,FACEBOOK,Mobile,380,580,190,7800,5
+2024-01-10,Summer Sale,Facebook,Desktop,250,800,50,2500,8
+2024-01-11,Summer Sale,facebook,desktop,260,820,52,2600,8
+2024-01-12,Summer Sale,FACEBOOK,DESKTOP,240,780,48,2400,7
+2024-01-13,summer sale,Google,Mobile,510,1250,153,5100,12
+2024-01-14,Summer Sale,google,Desktop,305,960,91,3050,9
+2024-01-15,SUMMER SALE,Facebook,Mobile,410,620,205,8200,6
+2024-01-16,Summer Sale,Facebook,desktop,255,810,51,2550,8

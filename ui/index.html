@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <title>AdScope – AI MARKETING INSIGHT ENGINE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            peach: '#E6A08B',
+            'peach-soft': '#FEF5F1',
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="min-h-screen bg-[#faf4ef] text-slate-900 antialiased flex items-center justify-center py-10">
+
+  <div class="w-full max-w-7xl mx-auto px-3 md:px-4 lg:px-6">
+    <div
+      class="bg-white/95 rounded-3xl shadow-[0_18px_45px_rgba(15,23,42,0.08)] border border-[#f0e6dd] min-h-[520px] px-8 py-10 md:px-12 md:py-12 lg:px-14 lg:py-14">
+
+      <!-- HEADER (shared) -->
+      <header class="flex items-center justify-between mb-8">
+        <div>
+          <div class="text-2xl font-semibold tracking-tight text-slate-900">
+            AdScope
+          </div>
+          <div class="text-[11px] text-slate-500 mt-1">
+            AI MARKETING INSIGHT ENGINE
+          </div>
+        </div>
+      </header>
+
+      <!-- SCREEN 2: UPLOAD FILE -->
+      <section id="screen-2" class="block">
+        <div class="flex items-center justify-between mb-4 text-xs text-slate-400">
+          <span>Step 1 of 2</span>
+        </div>
+
+        <div class="text-center mb-6">
+          <h1 class="text-2xl font-semibold tracking-tight mb-2">
+            Find what’s actually driving your campaign performance.
+          </h1>
+          <p class="text-sm text-slate-500">
+            We analyze your performance and surface what matters most.
+          </p>
+        </div>
+
+        <div
+          id="drop-zone"
+          class="border border-dashed border-slate-300 rounded-2xl bg-slate-50/70 px-6 py-10 text-center cursor-pointer transition hover:border-peach hover:bg-peach-soft"
+          onclick="document.getElementById('file-input').click()"
+          ondragover="event.preventDefault(); this.classList.add('ring-2','ring-peach/50');"
+          ondragleave="this.classList.remove('ring-2','ring-peach/50');"
+          ondrop="handleDrop(event)"
+        >
+          <div class="flex flex-col items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-white shadow-sm flex items-center justify-center text-slate-500 text-lg">
+              ⬆
+            </div>
+            <div class="text-sm text-slate-700">
+                Drop your campaign CSV here<br/>or click to upload
+            </div>
+            <div class="text-xs text-slate-400">
+                CSV only • No data stored • Used by performance marketers
+            </div>
+          </div>
+          <input
+            id="file-input"
+            type="file"
+            class="hidden"
+            accept=".csv"
+            onchange="handleFileChange(event)"
+          />
+        </div>
+
+        <div id="selected-file" class="mt-4 hidden text-xs text-slate-600">
+          <span class="font-medium">Selected file:</span>
+          <span id="selected-file-name"></span>
+        </div>
+
+        <p id="upload-error" class="mt-3 text-xs text-red-500 text-center hidden"></p>
+      </section>
+
+      <!-- SCREEN 3: PROCESSING -->
+      <section id="screen-3" class="hidden">
+        <div class="flex items-center justify-between mb-4 text-xs text-slate-400">
+          <button
+            type="button"
+            class="flex items-center gap-1 hover:text-slate-600"
+            onclick="backFromProcessing()">
+            <span class="text-lg leading-none">←</span>
+            <span>Back to upload</span>
+          </button>
+          <span>Step 2 of 2</span>
+        </div>
+
+        <div class="flex flex-col items-center text-center gap-4 mb-8">
+          <div class="w-12 h-12 rounded-full border-4 border-slate-200 border-t-peach animate-spin"></div>
+          <div>
+            <h1 class="text-2xl font-semibold tracking-tight mb-1">
+              Finding your biggest performance opportunities...
+            </h1>
+            <p class="text-sm text-slate-500 max-w-md">
+              We are reading the file, cleaning and aligning the data, detecting patterns, and generating clear marketing insights. This may take a few seconds.
+            </p>
+          </div>
+        </div>
+
+        <div id="steps" class="space-y-3 max-w-md mx-auto text-left text-sm text-slate-700">
+          <div class="flex items-center gap-3 opacity-40" id="step-1">
+            <div class="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center text-[11px] text-slate-500">1</div>
+            <span>Reading the file</span>
+          </div>
+          <div class="flex items-center gap-3 opacity-40" id="step-2">
+            <div class="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center text-[11px] text-slate-500">2</div>
+            <span>Mapping the data structure</span>
+          </div>
+          <div class="flex items-center gap-3 opacity-40" id="step-3">
+            <div class="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center text-[11px] text-slate-500">3</div>
+            <span>Calculating performance metrics</span>
+          </div>
+          <div class="flex items-center gap-3 opacity-40" id="step-4">
+            <div class="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center text-[11px] text-slate-500">4</div>
+            <span>Detecting key patterns</span>
+          </div>
+          <div class="flex items-center gap-3 opacity-40" id="step-5">
+            <div class="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center text-[11px] text-slate-500">5</div>
+            <span>Generating marketing insights</span>
+          </div>
+        </div>
+
+        <p class="mt-6 text-xs text-slate-400 text-center">
+          Almost done. We’re processing your data and assembling the key insights.
+        </p>
+      </section>
+
+      <!-- SCREEN 4: INSIGHTS -->
+      <section id="screen-4" class="hidden">
+        <div class="flex items-center justify-between mb-4 text-xs text-slate-400">
+          <div class="flex gap-4">
+            <button
+              type="button"
+              class="flex items-center gap-1 hover:text-slate-600"
+              onclick="resetToUpload()">
+              <span class="text-lg leading-none">↻</span>
+              <span>Analyze another file</span>
+            </button>
+          </div>
+          <span>Analysis results</span>
+        </div>
+
+        <div class="mb-6">
+          <h1 class="text-2xl font-semibold tracking-tight mb-1">
+            Top insights from your campaign performance
+          </h1>
+          <p class="text-sm text-slate-500">
+            Here are the 3 things you should pay attention to:
+          </p>
+        </div>
+
+        <section class="mb-2">
+          <div id="top-insights" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"></div>
+        </section>
+
+        <p id="results-error" class="mt-3 text-xs text-red-500 hidden"></p>
+      </section>
+
+    </div>
+  </div>
+
+  <script>
+    let selectedFile = null;
+    let stepTimer = null;
+    let isAnalyzing = false;
+
+    function showScreen(id) {
+      ['screen-2','screen-3','screen-4'].forEach(s => {
+        const el = document.getElementById(s);
+        el.classList.toggle('hidden', s !== id);
+        el.classList.toggle('block', s === id);
+      });
+    }
+
+    // ----- Screen 2 -----
+    function handleFileChange(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const isValid = /\.csv$/i.test(file.name);
+      const errorEl = document.getElementById('upload-error');
+      if (!isValid) {
+        errorEl.textContent = 'אנחנו תומכים כרגע רק בקובצי CSV. נסה שוב עם קובץ מתאים.';
+        errorEl.classList.remove('hidden');
+        selectedFile = null;
+        return;
+      }
+
+      errorEl.classList.add('hidden');
+      selectedFile = file;
+      document.getElementById('selected-file-name').textContent = file.name;
+      document.getElementById('selected-file').classList.remove('hidden');
+
+      // Automatically start analysis once file is chosen
+      startAnalysis();
+    }
+
+    function handleDrop(e) {
+      e.preventDefault();
+      const file = e.dataTransfer.files[0];
+      if (!file) return;
+      document.getElementById('file-input').files = e.dataTransfer.files;
+      handleFileChange({ target: { files: e.dataTransfer.files } });
+    }
+
+    // ----- Screen 3 + fetch -----
+    async function startAnalysis() {
+      if (!selectedFile || isAnalyzing) return;
+
+      isAnalyzing = true;
+
+      showScreen('screen-3');
+      startStepAnimation();
+
+      const formData = new FormData();
+      formData.append('file', selectedFile);
+
+      try {
+        const res = await fetch('/analyze', {
+          method: 'POST',
+          body: formData
+        });
+
+        if (!res.ok) {
+          throw new Error('HTTP ' + res.status);
+        }
+
+        const data = await res.json();
+        stopStepAnimation();
+        populateInsights(data);
+        showScreen('screen-4');
+      } catch (err) {
+        console.error(err);
+        stopStepAnimation();
+        document.getElementById('results-error').textContent =
+          'אירעה שגיאה בזמן הניתוח. נסה שוב מאוחר יותר.';
+        document.getElementById('results-error').classList.remove('hidden');
+        showScreen('screen-4');
+      } finally {
+        isAnalyzing = false;
+      }
+    }
+
+    function backFromProcessing() {
+      if (isAnalyzing) {
+        // While הניתוח רץ, נעדיף שלא להחזיר אחורה כדי לא לבלבל את המשתמש.
+        return;
+      }
+      showScreen('screen-2');
+    }
+
+    function startStepAnimation() {
+      const ids = ['step-1','step-2','step-3','step-4','step-5'];
+      ids.forEach(id => {
+        const el = document.getElementById(id);
+        el.classList.add('opacity-40');
+        el.classList.remove('text-peach','font-semibold','animate-pulse');
+      });
+      let index = 0;
+      stepTimer = setInterval(() => {
+        if (index >= ids.length) {
+          clearInterval(stepTimer);
+          stepTimer = null;
+          return;
+        }
+        const el = document.getElementById(ids[index]);
+        ids.slice(0,index).forEach(pid => {
+          const prev = document.getElementById(pid);
+          prev.classList.remove('animate-pulse');
+          prev.classList.add('opacity-60');
+        });
+        el.classList.remove('opacity-40');
+        el.classList.add('opacity-100','text-peach','font-semibold','animate-pulse');
+        index += 1;
+      }, 900);
+    }
+
+    function stopStepAnimation() {
+      if (stepTimer) {
+        clearInterval(stepTimer);
+        stepTimer = null;
+      }
+    }
+
+    // ----- Screen 4: populate insights -----
+    function inferInsightType(title, summary) {
+      const text = `${title || ''} ${summary || ''}`.toLowerCase();
+      if (text.includes('risk') || text.includes('warning') || text.includes('problem')) {
+        return 'risk';
+      }
+      if (text.includes('opportunity') || text.includes('growth') || text.includes('upside')) {
+        return 'opportunity';
+      }
+      if (text.includes('optimiz') || text.includes('optimize') || text.includes('optimum') || text.includes('improv')) {
+        return 'optimization';
+      }
+      return 'neutral';
+    }
+
+    function populateInsights(data) {
+      const prioritized = Array.isArray(data.prioritized_insights) ? data.prioritized_insights : [];
+      const executiveSummary = data.executive_summary || '';
+      const insightsToShow = prioritized.slice(0, 4);
+      const insightCount = insightsToShow.length;
+
+      // Top insights as compact floating tiles
+      const topEl = document.getElementById('top-insights');
+      topEl.innerHTML = '';
+      
+      // Check for empty insights list - show fallback card
+      if (insightCount === 0) {
+        // Render fallback insight card (matches insight card design)
+        topEl.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-3';
+        const fallbackCard = document.createElement('div');
+        fallbackCard.className = 'rounded-xl border border-slate-200/50 bg-[#FFF6F0] min-h-[160px] p-6 md:p-7 shadow-[0_8px_24px_rgba(15,23,42,0.08)]';
+        fallbackCard.innerHTML = `
+          <div class="flex flex-col gap-1.5">
+            <div class="text-xs font-semibold text-slate-900 leading-tight">
+              No strong insights detected
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              The campaign data appears relatively balanced with no clear optimization opportunity detected. Consider analyzing a longer time range or additional metrics.
+            </p>
+          </div>`;
+        topEl.appendChild(fallbackCard);
+        return;
+      }
+      
+      // Responsive grid: 1 col mobile, 2 col tablet, 3-4 cols desktop based on count
+      // Ensures all cards stay in a single row on desktop
+      let gridCols = 'grid grid-cols-1 md:grid-cols-2 gap-3';
+      if (insightCount === 3) {
+        gridCols += ' lg:grid-cols-3';
+      } else if (insightCount === 4) {
+        gridCols += ' lg:grid-cols-4';
+      } else if (insightCount === 2) {
+        gridCols += ' lg:grid-cols-2';
+      } else {
+        gridCols += ' lg:grid-cols-1';
+      }
+      topEl.className = gridCols;
+
+      // Helper to truncate text to ~2-3 lines (approx 120 chars)
+      function truncateText(text, maxLength = 120) {
+        if (!text) return '';
+        if (text.length <= maxLength) return text;
+        return text.substring(0, maxLength).trim() + '...';
+      }
+
+      const pastelPalette = [
+        'rgba(99, 102, 241, 0.08)',  // soft indigo
+        'rgba(34, 197, 94, 0.08)',   // soft green
+        'rgba(249, 115, 22, 0.08)',  // soft orange
+        'rgba(236, 72, 153, 0.08)',  // soft pink
+      ];
+
+      function formatOutcomeTitle(rawTitle, rawSummary) {
+        const title = rawTitle || '';
+        const summary = rawSummary || '';
+        const t = `${title} ${summary}`;
+        const s = `${summary}`;
+
+        // Metric detection
+        let metric = null;
+        if (/\broas\b/i.test(t)) metric = 'ROAS';
+        else if (/\bcvr\b/i.test(t) || /conversion rate/i.test(t)) metric = 'CVR';
+        else if (/\bcpa\b/i.test(t)) metric = 'CPA';
+        else if (/revenue/i.test(t)) metric = 'Revenue';
+        else if (/conversions/i.test(t) || /\bconvers\b/i.test(t)) metric = 'Conversions';
+        else if (/spend/i.test(t)) metric = 'Spend';
+
+        // Observed vs baseline extraction
+        let observed = null;
+        let baseline = null;
+
+        let m = s.match(/(?:increased|decreased|shifted).*?to\s+(\d+(?:\.\d+)?)\s+from a baseline of\s+(\d+(?:\.\d+)?)/i);
+        if (!m) m = s.match(/with\s+(\d+(?:\.\d+)?)\s+vs\s+(\d+(?:\.\d+)?)/i);
+        if (!m) m = s.match(/was\s+(\d+(?:\.\d+)?)\s*,?\s*compared to\s+a\s+baseline of\s+(\d+(?:\.\d+)?)/i);
+
+        if (m && m.length >= 3) {
+          observed = parseFloat(m[1]);
+          baseline = parseFloat(m[2]);
+        }
+
+        // Date extraction for "in N day(s)" (ISO only)
+        const isoDates = t.match(/\d{4}-\d{2}-\d{2}/g) || [];
+        let dayDiff = null;
+        if (isoDates.length >= 2) {
+          const d0 = new Date(isoDates[0] + 'T00:00:00');
+          const d1 = new Date(isoDates[isoDates.length - 1] + 'T00:00:00');
+          if (!isNaN(d0.getTime()) && !isNaN(d1.getTime())) {
+            dayDiff = Math.round((d1 - d0) / (1000 * 60 * 60 * 24));
+          }
+        }
+
+        const daySuffix = (dayDiff !== null && Math.abs(dayDiff) > 0 && Math.abs(dayDiff) <= 31)
+          ? ` in ${Math.abs(dayDiff)} day${Math.abs(dayDiff) === 1 ? '' : 's'}`
+          : '';
+
+        if (metric && baseline !== null && baseline !== 0 && observed !== null && isFinite(observed) && isFinite(baseline)) {
+          if (metric === 'CPA') {
+            const improved = observed < baseline;
+            const factor = improved ? (baseline / observed) : (observed / baseline);
+            const factorStr = (Math.round(factor * 10) / 10).toFixed(1).replace('.0','');
+            return improved
+              ? `CPA decreased ${factorStr}x${daySuffix}`
+              : `CPA increased ${factorStr}x${daySuffix}`;
+          }
+
+          const increased = observed >= baseline;
+          const factor = increased ? (observed / baseline) : (baseline / observed);
+          const factorStr = (Math.round(factor * 10) / 10).toFixed(1).replace('.0','');
+          const verb = increased ? 'increased' : 'decreased';
+          return `${metric} ${verb} ${factorStr}x${daySuffix}`;
+        }
+
+        // Fallback: keep title but trim filler
+        return title.replace(/significantly\s+/i, '').replace(/\s+/g, ' ').trim() || 'Insight';
+      }
+
+      insightsToShow.forEach((insight, index) => {
+        const rawTitle = insight.title || insight.issue_opportunity || `Insight`;
+        const summary = insight.summary || '';
+        const title = formatOutcomeTitle(rawTitle, summary);
+        const bg = pastelPalette[index % pastelPalette.length];
+
+        const card = document.createElement('div');
+        card.className = `rounded-xl border border-slate-200/50 min-h-[160px] p-6 md:p-7 shadow-[0_8px_24px_rgba(15,23,42,0.08)] transition hover:shadow-[0_12px_34px_rgba(15,23,42,0.12)]`;
+        card.style.backgroundColor = bg;
+        card.innerHTML = `
+          <div class="flex flex-col gap-1.5">
+            <div class="text-xs font-semibold text-slate-900 leading-tight">
+              ${title}
+            </div>
+            ${summary ? `<p class="text-sm text-slate-600 leading-relaxed">${summary}</p>` : ''}
+          </div>`;
+        topEl.appendChild(card);
+      });
+    }
+
+    function resetToUpload() {
+      selectedFile = null;
+      document.getElementById('selected-file').classList.add('hidden');
+      document.getElementById('results-error').classList.add('hidden');
+      showScreen('screen-2');
+    }
+  </script>
+
+</body>
+</html>
+

@@ -1,0 +1,270 @@
+Running ./test_data/t22_pattern_winning_campaign.csv
+{
+  "executive_summary": "Top insights: ROAS improved significantly from January 13 to January 14; Conversion efficiency improved in early January 2024; Summer Sale shows improved conversion efficiency over Winter Promo.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "ROAS improved significantly from January 13 to January 14.",
+      "why_it_matters": "Return on ad spend improved versus the comparison target (higher ROAS).",
+      "expected_impact": "Return on ad spend (ROAS) increased from 1.6 to 4.0. This shows a positive direction in performance."
+    },
+    {
+      "issue_opportunity": "Conversion efficiency improved in early January 2024.",
+      "why_it_matters": "Conversion efficiency improved versus the comparison target (higher CVR).",
+      "expected_impact": "The conversion rate (CVR) increased to 0.0643 during the segment from 2024-01-09 to 2024-01-14, compared to a baseline of 0.0303 from 2024-01-05 to 2024-01-08. This represents a positive direction in performance."
+    },
+    {
+      "issue_opportunity": "Summer Sale shows improved conversion efficiency over Winter Promo.",
+      "why_it_matters": "Conversion efficiency improved versus the comparison target (higher CVR).",
+      "expected_impact": "The Summer Sale segment has a conversion rate (CVR) of 0.0898, which is higher than the Winter Promo's baseline CVR of 0.0289. This represents a positive direction in performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-13 to 2024-01-14 for roas (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-01 to 2024-01-14 for cvr (budget, targeting, and delivery) and validate the pattern.",
+    "Compare budget and settings between Summer Sale and Winter Promo for cvr drivers.",
+    "Compare budget and settings between Summer Sale and Winter Promo for roas drivers."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "ROAS improved significantly from January 13 to January 14.",
+      "summary": "Return on ad spend (ROAS) increased from 1.6 to 4.0. This shows a positive direction in performance. Return on ad spend improved versus the comparison target (higher ROAS).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for roas (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Conversion efficiency improved in early January 2024.",
+      "summary": "The conversion rate (CVR) increased to 0.0643 during the segment from 2024-01-09 to 2024-01-14, compared to a baseline of 0.0303 from 2024-01-05 to 2024-01-08. This represents a positive direction in performance. Conversion efficiency improved versus the comparison target (higher CVR).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for cvr (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Summer Sale shows improved conversion efficiency over Winter Promo.",
+      "summary": "The Summer Sale segment has a conversion rate (CVR) of 0.0898, which is higher than the Winter Promo's baseline CVR of 0.0289. This represents a positive direction in performance. Conversion efficiency improved versus the comparison target (higher CVR).",
+      "recommended_actions": [
+        "Compare budget and settings between Summer Sale and Winter Promo for cvr drivers."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Summer Sale shows improved ROAS compared to Winter Promo.",
+      "summary": "The Summer Sale segment has an observed ROAS of 4.0, up from a baseline of 1.5. This represents a positive direction in performance metrics. Return on ad spend improved versus the comparison target (higher ROAS).",
+      "recommended_actions": [
+        "Compare budget and settings between Summer Sale and Winter Promo for roas drivers."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t24_pattern_mobile_underperform.csv
+{
+  "executive_summary": "Top insights: Conversion efficiency improved on January 14, 2024; ROAS improved significantly from January 13 to January 14; Revenue increased significantly on January 10, 2024.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Conversion efficiency improved on January 14, 2024.",
+      "why_it_matters": "Conversion efficiency improved versus the comparison target (higher CVR).",
+      "expected_impact": "The conversion rate (CVR) observed on January 14, 2024, was 0.058, up from 0.024 on January 13, 2024. This represents a positive change in conversion efficiency."
+    },
+    {
+      "issue_opportunity": "ROAS improved significantly from January 13 to January 14.",
+      "why_it_matters": "Return on ad spend improved versus the comparison target (higher ROAS).",
+      "expected_impact": "Return on ad spend (ROAS) increased from 1.5 to 3.0. This represents a positive direction in performance metrics."
+    },
+    {
+      "issue_opportunity": "Revenue increased significantly on January 10, 2024.",
+      "why_it_matters": "Business output increased versus the comparison target (higher revenue).",
+      "expected_impact": "Revenue observed was 810.0, compared to a baseline of 489.23. This represents a positive direction in performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review what changed around 2024-01-13 to 2024-01-14 for cvr (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-13 to 2024-01-14 for roas (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-10 for revenue (budget, targeting, and delivery) and validate the pattern.",
+    "Review device targeting and budget split for cvr differences."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Conversion efficiency improved on January 14, 2024.",
+      "summary": "The conversion rate (CVR) observed on January 14, 2024, was 0.058, up from 0.024 on January 13, 2024. This represents a positive change in conversion efficiency. Conversion efficiency improved versus the comparison target (higher CVR).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for cvr (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "ROAS improved significantly from January 13 to January 14.",
+      "summary": "Return on ad spend (ROAS) increased from 1.5 to 3.0. This represents a positive direction in performance metrics. Return on ad spend improved versus the comparison target (higher ROAS).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for roas (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue increased significantly on January 10, 2024.",
+      "summary": "Revenue observed was 810.0, compared to a baseline of 489.23. This represents a positive direction in performance. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-10 for revenue (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Desktop conversion efficiency improved compared to Mobile.",
+      "summary": "Desktop showed a positive direction in conversion rate (CVR) with an observed value of 0.055. This is higher than the baseline value of 0.025 for Mobile. Conversion efficiency improved versus the comparison target (higher CVR).",
+      "recommended_actions": [
+        "Review device targeting and budget split for cvr differences."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t21_pattern_budget_misallocation.csv
+{
+  "executive_summary": "Top insights: Google revenue significantly outperforms Facebook; Google conversions significantly outperformed Facebook; Conversions decreased significantly from January 13 to January 14.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Google revenue significantly outperforms Facebook.",
+      "why_it_matters": "Business output increased versus the comparison target (higher revenue).",
+      "expected_impact": "Google showed higher revenue at 1647.86 compared to Facebook's baseline of 53.57. The performance direction is positive."
+    },
+    {
+      "issue_opportunity": "Google conversions significantly outperformed Facebook.",
+      "why_it_matters": "Outcome volume increased versus the comparison target (more conversions).",
+      "expected_impact": "Google achieved 54.86 conversions compared to Facebook's baseline of 1.43. This represents a positive direction in performance."
+    },
+    {
+      "issue_opportunity": "Conversions decreased significantly from January 13 to January 14.",
+      "why_it_matters": "Outcome volume decreased versus the comparison target (fewer conversions).",
+      "expected_impact": "Conversions observed on January 14 were 1.0, down from 40.0 on January 13. This represents a negative direction in performance."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review platform-level budget allocation and delivery for revenue differences.",
+    "Review platform-level budget allocation and delivery for conversions differences.",
+    "Review what changed around 2024-01-13 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern.",
+    "Review what changed around 2024-01-13 to 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Google revenue significantly outperforms Facebook.",
+      "summary": "Google showed higher revenue at 1647.86 compared to Facebook's baseline of 53.57. The performance direction is positive. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for revenue differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Google conversions significantly outperformed Facebook.",
+      "summary": "Google achieved 54.86 conversions compared to Facebook's baseline of 1.43. This represents a positive direction in performance. Outcome volume increased versus the comparison target (more conversions).",
+      "recommended_actions": [
+        "Review platform-level budget allocation and delivery for conversions differences."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Conversions decreased significantly from January 13 to January 14.",
+      "summary": "Conversions observed on January 14 were 1.0, down from 40.0 on January 13. This represents a negative direction in performance. Outcome volume decreased versus the comparison target (fewer conversions).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for conversions (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue decreased significantly from January 13 to January 14.",
+      "summary": "Revenue observed on January 14 was 48.0, down from a baseline of 1215.0 on January 13. This represents a negative direction in performance. Business output decreased versus the comparison target (lower revenue).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-13 to 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t26_temporal_weekend_drop.csv
+{
+  "executive_summary": "Top insights: Weekend CPA increased significantly compared to weekdays; Revenue decreased on weekends compared to weekdays; Weekend spend decreased compared to weekday levels.",
+  "top_priorities": [
+    {
+      "issue_opportunity": "Weekend CPA increased significantly compared to weekdays.",
+      "why_it_matters": "Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "expected_impact": "The CPA for the weekend segment is 22.8125, which is higher than the baseline value of 10.0. This represents a negative direction in acquisition cost efficiency."
+    },
+    {
+      "issue_opportunity": "Revenue decreased on weekends compared to weekdays.",
+      "why_it_matters": "Business output decreased versus the comparison target (lower revenue).",
+      "expected_impact": "Revenue for the weekend segment was 168.75, while the baseline for weekdays was 735.0. This represents a negative direction in performance."
+    },
+    {
+      "issue_opportunity": "Weekend spend decreased compared to weekday levels.",
+      "why_it_matters": "Spend shifted versus the comparison target, which is primarily relevant for budget allocation context.",
+      "expected_impact": "Spend for the weekend segment was observed at 112.5, which is lower than the baseline value of 245.0 for weekdays. This represents a negative direction in spend comparison."
+    }
+  ],
+  "risks_warnings": [],
+  "recommended_checks": [
+    "Review time-based performance patterns and scheduling.",
+    "Review what changed around 2024-01-01 to 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern."
+  ],
+  "prioritized_insights": [
+    {
+      "title": "Weekend CPA increased significantly compared to weekdays.",
+      "summary": "The CPA for the weekend segment is 22.8125, which is higher than the baseline value of 10.0. This represents a negative direction in acquisition cost efficiency. Acquisition cost efficiency worsened versus the comparison target (higher CPA).",
+      "recommended_actions": [
+        "Review time-based performance patterns and scheduling."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue decreased on weekends compared to weekdays.",
+      "summary": "Revenue for the weekend segment was 168.75, while the baseline for weekdays was 735.0. This represents a negative direction in performance. Business output decreased versus the comparison target (lower revenue).",
+      "recommended_actions": [
+        "Review time-based performance patterns and scheduling."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Weekend spend decreased compared to weekday levels.",
+      "summary": "Spend for the weekend segment was observed at 112.5, which is lower than the baseline value of 245.0 for weekdays. This represents a negative direction in spend comparison. Spend shifted versus the comparison target, which is primarily relevant for budget allocation context.",
+      "recommended_actions": [
+        "Review time-based performance patterns and scheduling."
+      ],
+      "confidence": 0.8
+    },
+    {
+      "title": "Revenue increased significantly in early January 2024.",
+      "summary": "Revenue observed from January 9 to January 14 is 605.0, which is a positive change from the baseline value of 453.75 during January 5 to January 8. This period shows higher revenue compared to the previous comparison target. Business output increased versus the comparison target (higher revenue).",
+      "recommended_actions": [
+        "Review what changed around 2024-01-01 to 2024-01-14 for revenue (budget, targeting, and delivery) and validate the pattern."
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "notes": "Insights generated using grounded narrative layer."
+}
+---------------------
+Running ./test_data/t30_edge_no_strong_signal.csv
+
+================================================================================
+NO INSIGHTS FOUND
+================================================================================
+
+The deterministic engine did not find any statistically significant patterns. This may occur if the dataset is too small, has insufficient variation, all segments perform similarly, or required metrics (spend, revenue) are missing.
+
+This may occur if:
+  • The dataset is too small or has insufficient variation
+  • All segments perform similarly
+  • Required metrics (spend, revenue) are missing or invalid
+
+Please check your data and try again.
+================================================================================
+---------------------

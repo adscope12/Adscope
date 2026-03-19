@@ -1,0 +1,616 @@
+[
+  {
+    "dataset": "basic_01_single_campaign.csv",
+    "success": true,
+    "error": null,
+    "no_insights": false,
+    "insights_count": 3,
+    "executive_summary": "Top findings show mobile segment shows significant, performance improved in the, and cost per acquisition increased.",
+    "prioritized_insights": [
+      {
+        "title": "Mobile segment shows significant click performance improvement.",
+        "summary": "This segment outperforms the comparison target. The mobile segment recorded 175.83 clicks, compared to a baseline of 65.0 clicks. This represents a positive direction in performance."
+      },
+      {
+        "title": "Performance improved in the latest segment.",
+        "summary": "This segment shows stronger performance than the comparison target. The conversion rate (cvr) observed in the segment from 2024-01-09 to 2024-01-12 is 0.1215, which is higher than the baseline value of 0.0752 from 2024-01-05 to 2024-01-08. This represents a positive direction in performance."
+      },
+      {
+        "title": "Cost per acquisition increased in the latest segment.",
+        "summary": "This segment shows lower cost efficiency than the comparison target. The observed CPA is 76.0, compared to the baseline value of 40.34. This segment shows lower cost efficiency than the comparison target."
+      }
+    ]
+  },
+  {
+    "dataset": "basic_02_multi_campaign.csv",
+    "success": true,
+    "error": null,
+    "no_insights": false,
+    "insights_count": 3,
+    "executive_summary": "Top findings show conversions increased in the, revenue increased significantly in, and revenue performance exceeds baseline.",
+    "prioritized_insights": [
+      {
+        "title": "Conversions increased in the latest segment compared to the previous period.",
+        "summary": "This segment shows stronger performance than the comparison target. The segment from 2024-01-11 to 2024-01-16 showed 17.17 conversions, up from 7.6 in the comparison target from 2024-01-06 to 2024-01-10. This represents a positive direction in performance."
+      },
+      {
+        "title": "Revenue increased significantly in the latest segment.",
+        "summary": "This segment shows stronger performance than the comparison target. The segment from 2024-01-11 to 2024-01-16 showed revenue of 1720.0, compared to a baseline of 772.0 from 2024-01-06 to 2024-01-10. This represents a positive direction in performance."
+      },
+      {
+        "title": "Revenue performance exceeds baseline in January 2024 segment.",
+        "summary": "This segment shows stronger performance than the comparison target. The segment on January 14, 2024, shows revenue of 2700.0, which is positive compared to the baseline value of 1117.33. This segment demonstrates stronger performance than the comparison target."
+      }
+    ]
+  },
+  {
+    "dataset": "basic_03_platform_device.csv",
+    "success": true,
+    "error": null,
+    "no_insights": false,
+    "insights_count": 3,
+    "executive_summary": "Top findings show segment performance improved significantly, cost per click increased, and mobile segment shows significant.",
+    "prioritized_insights": [
+      {
+        "title": "Segment performance improved significantly on January 16, 2024.",
+        "summary": "This segment shows stronger performance than the comparison target. The segment recorded a conversion rate (cvr) of 0.1176, compared to a baseline of 0.0390. This represents a positive direction in performance."
+      },
+      {
+        "title": "Cost per click increased significantly in the latest segment.",
+        "summary": "This segment shows lower cost efficiency than the comparison target. The observed cost per click (CPC) is 5.0, compared to a baseline of 2.0. This represents a positive direction in CPC."
+      },
+      {
+        "title": "Mobile segment shows significant increase in clicks.",
+        "summary": "This segment outperforms the comparison target. The mobile segment achieved 176.0 clicks, compared to the desktop's 70.25 clicks. This represents a positive direction in performance."
+      }
+    ]
+  },
+  {
+    "dataset": "edge_01_small_dataset.csv",
+    "success": true,
+    "error": null,
+    "no_insights": true,
+    "insights_count": 0,
+    "executive_summary": "No strong insights detected in this dataset.",
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "noisy_01_messy_labels.csv",
+    "success": true,
+    "error": null,
+    "no_insights": false,
+    "insights_count": 3,
+    "executive_summary": "Top findings show segment performance improved significantly, 2024-01-16 00:00:00 is outperforming, and roas improved significantly in.",
+    "prioritized_insights": [
+      {
+        "title": "Segment performance improved significantly on January 16, 2024.",
+        "summary": "This segment shows stronger performance than the comparison target. The conversion rate (cvr) for the segment on January 16, 2024, is 0.1569, compared to a baseline of 0.0293. This represents a positive direction in performance."
+      },
+      {
+        "title": "2024-01-16 00:00:00 is outperforming 2024-01-15 00:00:00",
+        "summary": "This suggests more efficient budget use and stronger business performance. 2024-01-16 00:00:00 shows stronger CPC than 2024-01-15 00:00:00, with 5.00 vs 2.00 (150% difference)."
+      },
+      {
+        "title": "ROAS improved significantly in the latest segment.",
+        "summary": "This segment shows stronger performance than the comparison target. The observed ROAS is 3.18, compared to a baseline of 1.51. This represents a positive direction in performance."
+      }
+    ]
+  },
+  {
+    "dataset": "t01_clean_en_single_campaign.csv",
+    "success": true,
+    "error": null,
+    "no_insights": false,
+    "insights_count": 3,
+    "executive_summary": "Top findings show conversions increased in the, revenue increased in the, and segment shows significant increase.",
+    "prioritized_insights": [
+      {
+        "title": "Conversions increased in the latest segment.",
+        "summary": "This segment shows stronger performance than the comparison target. The segment from 2024-01-09 to 2024-01-14 showed 11.33 conversions, compared to 5.5 in the previous segment from 2024-01-05 to 2024-01-08. This represents a positive direction in performance."
+      },
+      {
+        "title": "Revenue increased in the latest segment compared to the previous period.",
+        "summary": "This segment shows stronger performance than the comparison target. The segment from 2024-01-09 to 2024-01-14 showed a revenue of 443.33, which is higher than the baseline revenue of 272.5 from 2024-01-05 to 2024-01-08. This represents a positive direction in performance."
+      },
+      {
+        "title": "Segment shows significant increase in conversions.",
+        "summary": "This segment shows stronger performance than the comparison target. The segment recorded 18.0 conversions, compared to a baseline of 8.92. This represents a positive direction in performance."
+      }
+    ]
+  },
+  {
+    "dataset": "t02_clean_en_multi_campaign.csv",
+    "success": true,
+    "error": null,
+    "no_insights": false,
+    "insights_count": 3,
+    "executive_summary": "Top findings show spring launch outperforms winter, spring launch outperforms winter, and cost per acquisition increased.",
+    "prioritized_insights": [
+      {
+        "title": "Spring launch outperforms winter promo in conversions.",
+        "summary": "This segment shows stronger performance than the comparison target. The spring launch segment recorded 18.8 conversions, significantly higher than the winter promo baseline of 3.2. This shows a positive direction in performance metrics."
+      },
+      {
+        "title": "Spring launch outperforms winter promo in revenue.",
+        "summary": "This segment shows stronger performance than the comparison target. The spring launch segment generated a revenue of 586.0, compared to the winter promo's 156.0. This represents a positive direction in performance."
+      },
+      {
+        "title": "Cost per acquisition increased in the latest segment.",
+        "summary": "This segment shows lower cost efficiency than the comparison target. The observed CPA is 40.0, compared to a baseline of 19.42. This shows a positive direction in cost efficiency."
+      }
+    ]
+  },
+  {
+    "dataset": "t03_clean_en_platform_device.csv",
+    "success": true,
+    "error": null,
+    "no_insights": false,
+    "insights_count": 3,
+    "executive_summary": "Top findings show cost efficiency decreased in, google segment outperforms facebook, and google segment outperforms facebook.",
+    "prioritized_insights": [
+      {
+        "title": "Cost efficiency decreased in the latest segment.",
+        "summary": "This segment shows lower cost efficiency than the comparison target. The observed CPA is 30.83, which is higher than the baseline CPA of 10.0. This segment shows lower cost efficiency than the comparison target."
+      },
+      {
+        "title": "Google segment outperforms Facebook in conversions.",
+        "summary": "This segment shows stronger performance than the comparison target. The Google segment recorded 28.14 conversions, significantly higher than the Facebook baseline of 7.57. This represents a positive direction in performance."
+      },
+      {
+        "title": "Google segment outperforms Facebook in revenue.",
+        "summary": "This segment shows stronger performance than the comparison target. The Google segment reported a revenue of 844.29, compared to Facebook's baseline of 326.79. This represents a positive direction in performance."
+      }
+    ]
+  },
+  {
+    "dataset": "t04_clean_en_budget_imbalance.csv",
+    "success": true,
+    "error": null,
+    "no_insights": false,
+    "insights_count": 3,
+    "executive_summary": "Top findings show google segment shows significant, google segment shows significant, and google segment shows strong.",
+    "prioritized_insights": [
+      {
+        "title": "Google segment shows significant revenue increase over Facebook.",
+        "summary": "This segment shows stronger performance than the comparison target. The Google segment reported a revenue of 1262.86, compared to a baseline of 53.57. This represents a positive direction in performance."
+      },
+      {
+        "title": "Google segment shows significant spend increase.",
+        "summary": "This segment outperforms the comparison target. The Google segment reported a spend of 478.57, compared to a baseline of 43.57. This represents a positive direction in performance."
+      },
+      {
+        "title": "Google segment shows strong conversion performance.",
+        "summary": "This segment shows stronger performance than the comparison target. The Google segment recorded 41.86 conversions, significantly higher than the Facebook baseline of 1.43. This represents a positive direction in performance."
+      }
+    ]
+  },
+  {
+    "dataset": "t05_clean_en_ctr_high_cvr_low.csv",
+    "success": true,
+    "error": null,
+    "no_insights": false,
+    "insights_count": 1,
+    "executive_summary": "Top finding: Segment shows increased conversions compared to baseline.",
+    "prioritized_insights": [
+      {
+        "title": "Segment shows increased conversions compared to baseline.",
+        "summary": "This segment shows stronger performance than the comparison target. The segment recorded 4.0 conversions, surpassing the baseline value of 2.31. This represents a positive direction in performance."
+      }
+    ]
+  },
+  {
+    "dataset": "t06_clean_he_single_campaign.csv",
+    "success": true,
+    "error": null,
+    "no_insights": false,
+    "insights_count": 3,
+    "executive_summary": "Top findings show conversions increased in the, revenue increased in the, and segment shows significant increase.",
+    "prioritized_insights": [
+      {
+        "title": "Conversions increased in the latest segment.",
+        "summary": "This segment shows stronger performance than the comparison target. The segment from 2024-01-09 to 2024-01-14 showed 11.33 conversions, compared to 5.5 in the previous segment from 2024-01-05 to 2024-01-08. This represents a positive direction in performance."
+      },
+      {
+        "title": "Revenue increased in the latest segment compared to the previous period.",
+        "summary": "This segment shows stronger performance than the comparison target. The segment from 2024-01-09 to 2024-01-14 showed a revenue of 443.33, which is higher than the baseline revenue of 272.5 from 2024-01-05 to 2024-01-08. This represents a positive direction in performance."
+      },
+      {
+        "title": "Segment shows significant increase in conversions.",
+        "summary": "This segment shows stronger performance than the comparison target. The segment recorded 18.0 conversions, outperforming the baseline value of 8.92. This represents a positive direction in performance."
+      }
+    ]
+  },
+  {
+    "dataset": "t07_clean_he_multi_campaign.csv",
+    "success": true,
+    "error": null,
+    "no_insights": false,
+    "insights_count": 3,
+    "executive_summary": "Top findings show spring launch outperforms winter, spring launch outperforms winter, and cost per acquisition increased.",
+    "prioritized_insights": [
+      {
+        "title": "Spring launch outperforms winter promotion in conversions.",
+        "summary": "This segment shows stronger performance than the comparison target. The 'השקה אביב' segment showed 18.8 conversions compared to 3.2 for 'מבצע חורף'. This represents a positive direction in performance."
+      },
+      {
+        "title": "Spring launch outperforms winter promotion in revenue.",
+        "summary": "This segment shows stronger performance than the comparison target. The 'השקה אביב' segment generated revenue of 586.0, compared to 156.0 for 'מבצע חורף'. This shows a positive direction in performance."
+      },
+      {
+        "title": "Cost per acquisition increased in the latest segment.",
+        "summary": "This segment shows lower cost efficiency than the comparison target. The observed CPA is 40.0, compared to the baseline value of 19.42. This segment shows lower cost efficiency than the comparison target."
+      }
+    ]
+  },
+  {
+    "dataset": "t08_clean_he_platform_device.csv",
+    "success": true,
+    "error": null,
+    "no_insights": false,
+    "insights_count": 3,
+    "executive_summary": "Top findings show cost efficiency decreased in, google segment outperforms facebook, and google segment outperforms facebook.",
+    "prioritized_insights": [
+      {
+        "title": "Cost efficiency decreased in the latest segment.",
+        "summary": "This segment shows lower cost efficiency than the comparison target. The CPA observed value is 30.83, which is higher than the baseline value of 10.0. This segment shows lower cost efficiency than the comparison target."
+      },
+      {
+        "title": "Google segment outperforms Facebook in conversions.",
+        "summary": "This segment shows stronger performance than the comparison target. The Google segment shows 28.14 conversions compared to 7.57 for Facebook. This represents a positive direction in performance."
+      },
+      {
+        "title": "Google segment outperforms Facebook in revenue.",
+        "summary": "This segment shows stronger performance than the comparison target. The Google segment reported a revenue of 844.29, compared to Facebook's baseline of 326.79. This represents a positive direction in performance."
+      }
+    ]
+  },
+  {
+    "dataset": "t09_clean_he_budget_imbalance.csv",
+    "success": true,
+    "error": null,
+    "no_insights": false,
+    "insights_count": 3,
+    "executive_summary": "Top findings show google segment shows significant, google segment shows significant, and google segment outperforms facebook.",
+    "prioritized_insights": [
+      {
+        "title": "Google segment shows significant revenue increase over Facebook.",
+        "summary": "This segment shows stronger performance than the comparison target. The Google segment reported a revenue of 1262.86, compared to a baseline of 53.57. This represents a positive direction in performance."
+      },
+      {
+        "title": "Google segment shows significant spend increase over Facebook.",
+        "summary": "This segment outperforms the comparison target. The observed spend for the Google segment is 478.57, compared to a baseline of 43.57. This represents a positive direction in spend."
+      },
+      {
+        "title": "Google segment outperforms Facebook in conversions.",
+        "summary": "This segment shows stronger performance than the comparison target. The Google segment shows 41.86 conversions compared to Facebook's 1.43. This represents a positive direction in performance."
+      }
+    ]
+  },
+  {
+    "dataset": "t10_clean_he_weekend_drop.csv",
+    "success": true,
+    "error": null,
+    "no_insights": false,
+    "insights_count": 3,
+    "executive_summary": "Top findings show weekend is outperforming weekday, cost per acquisition increased, and weekend conversions are lower.",
+    "prioritized_insights": [
+      {
+        "title": "Weekend is outperforming weekday",
+        "summary": "This suggests more efficient budget use and stronger business performance. Weekend shows stronger CPA than weekday, with 20.49 vs 10.00 (105% difference)."
+      },
+      {
+        "title": "Cost per acquisition increased in the latest segment.",
+        "summary": "This segment shows lower cost efficiency than the comparison target. The observed CPA is 22.5, which is higher than the baseline value of 12.27. This segment shows lower cost efficiency than the comparison target."
+      },
+      {
+        "title": "Weekend conversions are lower than weekday conversions.",
+        "summary": "This segment shows weaker performance than the comparison target. Weekend conversions are at 7.0, while weekday conversions are at 24.5. This shows a negative direction in performance."
+      }
+    ]
+  },
+  {
+    "dataset": "t11_mixed_lang_campaigns.csv",
+    "success": true,
+    "error": null,
+    "no_insights": false,
+    "insights_count": 3,
+    "executive_summary": "Top findings show cost efficiency decreased in, cost efficiency decreased in, and summer campaign outperforms winter.",
+    "prioritized_insights": [
+      {
+        "title": "Cost efficiency decreased in the latest segment.",
+        "summary": "This segment shows lower cost efficiency than the comparison target. The observed CPA is 34.0, which is higher than the baseline value of 10.0. This segment shows lower cost efficiency than the comparison target."
+      },
+      {
+        "title": "Cost efficiency decreased in the recent segment.",
+        "summary": "This segment shows lower cost efficiency than the comparison target. The observed CPA is 30.26, which is higher than the baseline CPA of 15.25. This segment shows lower cost efficiency than the comparison target."
+      },
+      {
+        "title": "Summer campaign outperforms winter promo in conversions.",
+        "summary": "This segment shows stronger performance than the comparison target. The 'מבצע קיץ' segment recorded 17.0 conversions, compared to 3.5 for the winter promo. This represents a positive direction in performance."
+      }
+    ]
+  },
+  {
+    "dataset": "t12_mixed_lang_platforms.csv",
+    "success": true,
+    "error": null,
+    "no_insights": false,
+    "insights_count": 3,
+    "executive_summary": "Top findings show cost efficiency decreased in, google segment outperforms facebook, and google segment outperforms facebook.",
+    "prioritized_insights": [
+      {
+        "title": "Cost efficiency decreased in the latest segment.",
+        "summary": "This segment shows lower cost efficiency than the comparison target. The observed CPA is 30.83, which is higher than the baseline value of 10.0. This segment shows lower cost efficiency than the comparison target."
+      },
+      {
+        "title": "Google segment outperforms Facebook in conversions.",
+        "summary": "This segment shows stronger performance than the comparison target. The Google segment shows a positive direction in conversions with an observed value of 30.25 compared to a baseline value of 5.75. This segment also reflects higher spend, revenue, and clicks."
+      },
+      {
+        "title": "Google segment outperforms Facebook in revenue.",
+        "summary": "This segment shows stronger performance than the comparison target. The Google segment generated revenue of 907.5, compared to a baseline of 271.875. This represents a positive direction in performance."
+      }
+    ]
+  },
+  {
+    "dataset": "t13_mixed_lang_devices.csv",
+    "success": false,
+    "error": "Request error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t14_mixed_lang_schema.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t15_mixed_lang_time_series.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t16_noisy_labels_case_mix.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t17_noisy_schema_typos.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t18_noisy_gibberish_headers.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t19_noisy_sparse_values.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t20_noisy_high_cardinality.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t21_pattern_budget_misallocation.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t22_pattern_winning_campaign.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t23_pattern_losing_campaign.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t24_pattern_mobile_underperform.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t25_pattern_desktop_outperform.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t26_temporal_weekend_drop.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t27_temporal_gradual_decline.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t28_temporal_recovery_pattern.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t29_edge_small_dataset.csv",
+    "success": true,
+    "error": null,
+    "no_insights": true,
+    "insights_count": 0,
+    "executive_summary": "No strong insights detected in this dataset.",
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t30_edge_no_strong_signal.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t31_big_dataset_google_meta.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t32_big_dataset_campaigns.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t33_missing_revenue.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t34_missing_impressions.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t35_extra_dimensions.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t36_schema_variation.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t37_messy_case_schema.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t38_typo_schema.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t39_long_time_series.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "t40_sparse_dataset.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  },
+  {
+    "dataset": "temporal_01_weekend_drop.csv",
+    "success": false,
+    "error": "Schema interpretation failed: APIConnectionError. Please check your file format and try again.",
+    "no_insights": null,
+    "insights_count": null,
+    "executive_summary": null,
+    "prioritized_insights": []
+  }
+]

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-container">
+    <div class="content-wrapper">
+        <div class="mb-6">
+            <div class="brand-title">AdScope</div>
+            <div class="brand-subtitle">AI Marketing Insight Engine</div>
+        </div>
+        
+        <div class="card p-5">
+            <h1 class="text-xl font-semibold text-gray-900 text-center mb-3" style="letter-spacing: -0.8px;">Who are you?</h1>
+            <p class="text-center text-gray-500 mb-5 text-sm">Select your role to get personalized insights.</p>
+            
+            <div class="grid md:grid-cols-2 gap-3">
+                <!-- Business Owner Card -->
+                <div class="user-card-selectable p-4" onclick="selectUserType('business', this)">
+                    <div class="flex items-center justify-center mb-2">
+                        <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" class="icon-thin">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-base font-semibold text-gray-900 mb-1 text-center">Business Owner</h3>
+                    <p class="text-gray-600 text-center leading-relaxed text-xs">One clear business answer + 3–4 moves.</p>
+                </div>
+                
+                <!-- Media Agency Card -->
+                <div class="user-card-selectable p-4" onclick="selectUserType('agency', this)">
+                    <div class="flex items-center justify-center mb-2">
+                        <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" class="icon-thin">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-base font-semibold text-gray-900 mb-1 text-center">Media Agency</h3>
+                    <p class="text-gray-600 text-center leading-relaxed text-xs">The same answer + a client-ready performance report with your branding.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function selectUserType(type, element) {
+        // Remove selected class from all cards
+        document.querySelectorAll('.user-card-selectable').forEach(card => {
+            card.classList.remove('selected');
+        });
+        
+        // Add selected class to clicked card immediately
+        element.classList.add('selected');
+        
+        // Store user type
+        sessionStorage.setItem('userType', type);
+        
+        // Immediately navigate to upload page
+        window.location.href = '/upload';
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,9 @@
+﻿date,campaign,platform,device,spend,revenue,clicks,impressions,conversions
+1.1.2024,A,Google,Mobile,1000,3000,500,10000,50
+1.1.2024,B,Google,Desktop,1500,2000,400,9000,40
+1.1.2024,C,Facebook,Mobile,800,1200,300,8000,20
+1.1.2024,D,Facebook,Desktop,2000,2500,600,15000,60
+1.2.2024,A,Google,Mobile,1200,3600,550,11000,55
+1.2.2024,B,Google,Desktop,1800,2100,420,9500,38
+1.2.2024,C,Facebook,Mobile,900,1000,280,7800,18
+1.2.2024,D,Facebook,Desktop,2500,2400,650,16000,55

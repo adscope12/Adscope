@@ -1,0 +1,17 @@
+date,campaign,platform,device,spend,revenue,clicks,impressions,conversions
+2024-01-01,Product Launch,Google,Mobile,500,1500,150,5000,15
+2024-01-02,Product Launch,Google,Mobile,520,1600,156,5200,16
+2024-01-03,Product Launch,Google,Mobile,480,1400,144,4800,14
+2024-01-04,Product Launch,Google,Desktop,300,1200,90,3000,12
+2024-01-05,Product Launch,Google,Desktop,310,1250,93,3100,12
+2024-01-06,Product Launch,Google,Desktop,290,1150,87,2900,11
+2024-01-07,Product Launch,Facebook,Mobile,400,800,200,8000,8
+2024-01-08,Product Launch,Facebook,Mobile,420,850,210,8400,8
+2024-01-09,Product Launch,Facebook,Mobile,380,750,190,7600,7
+2024-01-10,Product Launch,Facebook,Desktop,250,600,50,2500,6
+2024-01-11,Product Launch,Facebook,Desktop,260,620,52,2600,6
+2024-01-12,Product Launch,Facebook,Desktop,240,580,48,2400,5
+2024-01-13,Product Launch,Google,Mobile,510,1550,153,5100,15
+2024-01-14,Product Launch,Google,Desktop,305,1220,91,3050,12
+2024-01-15,Product Launch,Facebook,Mobile,410,820,205,8200,8
+2024-01-16,Product Launch,Facebook,Desktop,255,610,51,2550,6
