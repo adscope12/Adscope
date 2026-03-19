@@ -14,8 +14,61 @@ CRITICAL: Data Immutability
 """
 
 from typing import Dict, Any, Optional
+import logging
+import re
 import pandas as pd
 from ..reading.reading_assistant import SchemaMapping
+
+logger = logging.getLogger(__name__)
+
+
+def _is_id_like_column(name: str) -> bool:
+    """Detect identifier-like column names (campaign_id, id, identifier, etc.)."""
+    n = (name or "").strip().lower()
+    if not n:
+        return False
+    return (
+        n == "id"
+        or n.endswith("_id")
+        or "identifier" in n
+        or re.search(r"\bid\b", n) is not None
+    )
+
+
+def _slugify_column_name(name: str) -> str:
+    """Create a safe suffix from original column name."""
+    s = (name or "").strip().lower()
+    s = re.sub(r"[^a-z0-9]+", "_", s).strip("_")
+    return s or "field"
+
+
+def _unique_canonical_name(base: str, used: set[str]) -> str:
+    """Return a unique canonical name by appending numeric suffixes when needed."""
+    candidate = base
+    i = 2
+    while candidate in used:
+        candidate = f"{base}_{i}"
+        i += 1
+    return candidate
+
+
+def _disambiguate_collision_name(
+    original_name: str,
+    canonical_name: str,
+    used: set[str],
+) -> str:
+    """
+    Deterministically resolve canonical-name collisions:
+    - ID-like fields -> <canonical>_id
+    - Others -> <canonical>_<original_slug>
+    """
+    base = (canonical_name or "").strip().lower() or "field"
+    if _is_id_like_column(original_name):
+        if not base.endswith("_id"):
+            base = f"{base}_id"
+    else:
+        base = f"{base}_{_slugify_column_name(original_name)}"
+    return _unique_canonical_name(base, used)
 
 
 def _apply_builtin_aliases(canonical_df: pd.DataFrame) -> pd.DataFrame:
@@ -85,18 +138,47 @@ def create_canonical_bridge(
             canonical_name = mapping.canonical_name
             
             # CRITICAL FIX #5: Canonical name collision detection
-            # Check if this canonical name is already mapped
+            # Check if this canonical name is already mapped.
+            # Resolve deterministically instead of hard-failing the whole analysis.
             if canonical_name in column_mapping_dict.values():
                 # Find which original column already maps to this canonical name
                 existing_original = next(
                     orig for orig, canon in column_mapping_dict.items()
                     if canon == canonical_name
                 )
-                raise ValueError(
-                    f"Canonical name collision: Both '{mapping.original_name}' and "
-                    f"'{existing_original}' map to '{canonical_name}'. "
-                    f"Please review schema mappings or adjust column names."
+                used_names = set(column_mapping_dict.values())
+
+                # Prefer non-ID field for business dimension; move ID-like field to *_id.
+                existing_is_id = _is_id_like_column(existing_original)
+                new_is_id = _is_id_like_column(mapping.original_name)
+
+                if existing_is_id and not new_is_id:
+                    # Existing mapping is id-like, new one is business-like.
+                    # Keep new at canonical base, move existing to disambiguated name.
+                    replacement = _disambiguate_collision_name(
+                        existing_original, canonical_name, used_names - {canonical_name}
+                    )
+                    column_mapping_dict[existing_original] = replacement
+                    used_names = set(column_mapping_dict.values())
+                    column_mapping_dict[mapping.original_name] = _unique_canonical_name(
+                        canonical_name, used_names - {canonical_name}
+                    )
+                    logger.warning(
+                        "Canonical collision resolved: '%s' moved to '%s'; '%s' kept as '%s'",
+                        existing_original, replacement, mapping.original_name, canonical_name
+                    )
+                    continue
+
+                # Otherwise disambiguate the incoming colliding field.
+                resolved_name = _disambiguate_collision_name(
+                    mapping.original_name, canonical_name, used_names
                 )
+                column_mapping_dict[mapping.original_name] = resolved_name
+                logger.warning(
+                    "Canonical collision resolved: '%s' mapped to '%s' (original target '%s' used by '%s')",
+                    mapping.original_name, resolved_name, canonical_name, existing_original
+                )
+                continue
             
             column_mapping_dict[mapping.original_name] = canonical_name
     

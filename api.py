@@ -316,6 +316,7 @@ async def analyze_file(
             # Pipeline reported an error
             error_msg = result.get("error", "Unknown error occurred")
             logger.error(f"/analyze SPA pipeline error: {error_msg}")
+            logger.info("/analyze SPA response status=error")
 
             status_code = 400
             if "not found" in error_msg.lower():
@@ -328,6 +329,7 @@ async def analyze_file(
         # No-insights case: still return the simplified JSON shape
         if result.get("no_insights"):
             message = result.get("message", "No insights found")
+            logger.info("/analyze SPA response status=no_insights")
             payload = {
                 "executive_summary": message,
                 "prioritized_insights": [],
@@ -344,34 +346,58 @@ async def analyze_file(
 
         executive_summary = raw_result.get("executive_summary", "")
         top_priorities = raw_result.get("top_priorities") or []
+        raw_prioritized = raw_result.get("prioritized_insights") or []
+        raw_recommended_checks = raw_result.get("recommended_checks") or []
+        raw_risks = raw_result.get("risks_warnings") or []
         
         # Ensure top_priorities list items are also JSON-serializable
         top_priorities = _make_json_serializable(top_priorities)
+        raw_prioritized = _make_json_serializable(raw_prioritized)
+        raw_recommended_checks = _make_json_serializable(raw_recommended_checks)
+        raw_risks = _make_json_serializable(raw_risks)
+
+        logger.info(
+            "/analyze SPA raw result counts: top_priorities=%d, prioritized_insights=%d, recommended_checks=%d, risks_warnings=%d",
+            len(top_priorities), len(raw_prioritized), len(raw_recommended_checks), len(raw_risks)
+        )
 
         prioritized_insights: List[Dict[str, Any]] = []
-        for prio in top_priorities:
-            if not isinstance(prio, dict):
-                continue
-            # Convert each priority dict to ensure all nested values are JSON-serializable
-            prio = _make_json_serializable(prio)
-            title = prio.get("issue_opportunity", "")
-            why = prio.get("why_it_matters", "")
-            impact = prio.get("expected_impact", "")
+        # Prefer top_priorities for UX consistency; fallback to prioritized_insights when needed.
+        if top_priorities:
+            for prio in top_priorities:
+                if not isinstance(prio, dict):
+                    continue
+                # Convert each priority dict to ensure all nested values are JSON-serializable
+                prio = _make_json_serializable(prio)
+                title = prio.get("issue_opportunity", "")
+                why = prio.get("why_it_matters", "")
+                impact = prio.get("expected_impact", "")
 
-            parts = [p for p in [why, impact] if p]
-            summary = " ".join(parts).strip()
-
-            prioritized_insights.append({"title": title, "summary": summary})
+                parts = [p for p in [why, impact] if p]
+                summary = " ".join(parts).strip()
+                prioritized_insights.append({"title": title, "summary": summary})
+        else:
+            for item in raw_prioritized:
+                if not isinstance(item, dict):
+                    continue
+                title = item.get("title", "")
+                summary = item.get("summary", "")
+                if title or summary:
+                    prioritized_insights.append({"title": title, "summary": summary})
 
         payload = {
             "executive_summary": executive_summary,
             "prioritized_insights": prioritized_insights,
-            "recommended_checks": [],
-            "risk_warnings": [],
+            "recommended_checks": raw_recommended_checks,
+            "risk_warnings": raw_risks,
         }
 
         # Ensure entire payload is JSON serializable (handles numpy bools, etc.)
         payload = _make_json_serializable(payload)
+        logger.info(
+            "/analyze SPA response status=success, prioritized_insights=%d",
+            len(payload.get("prioritized_insights", []))
+        )
 
         return JSONResponse(status_code=200, content=payload)
 
